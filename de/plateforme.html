@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex"><title>Was zwischen Ihrer Frage und dem Beweis geschieht. | LexTutor</title>
+<link rel="alternate" hreflang="fr" href="../fr/plateforme.html">
+<link rel="alternate" hreflang="de" href="../de/plateforme.html">
+<link rel="alternate" hreflang="it" href="../it/plateforme.html">
+<link rel="alternate" hreflang="en" href="../en/plateforme.html">
+<link rel="alternate" hreflang="x-default" href="../fr/plateforme.html">
+<style>
+/* ================================================================
+   LEXTUTOR v6 « INSTRUMENT » — G1 ledger-héros clair · G2 encre (zéro bleu)
+   · G3 serif réservé à la loi. Substrat papier conservé. Zéro requête réseau.
+   ================================================================ */
+:root{
+  --paper:#fdfcf9; --paper-2:#f7f5ef; --paper-3:#f1eee6;
+  --ink:#171512; --ink-2:#4a463f; --ink-3:#78736a; --line:#e6e2d8; --line-2:#cfc9bb;
+  --law:#16a249; --case:#7c3bed; --ana:#f97415;
+  --law-t:#15803d; --case-t:#6d28d9; --ana-t:#c2410c;
+  --red:#e4002b; --night:#12100c;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;   /* UNIQUEMENT quand la loi parle */
+  --sans:Inter,-apple-system,'Segoe UI',system-ui,sans-serif; /* la voix LexTutor, titres compris */
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',monospace;   /* la donnée */
+  --dur:180ms; --ease:cubic-bezier(0,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.62;font-size:17px;
+  font-feature-settings:"kern","liga";text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.028;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+a{color:inherit;text-decoration:none}
+p{max-width:62ch;text-wrap:pretty}
+/* G3 — titres en grotesque graissée resserrée (la voix du produit) */
+h1,h2,h3{font-family:var(--sans);font-weight:680;letter-spacing:-.032em;text-wrap:balance}
+num,.num{font-variant-numeric:tabular-nums lining-nums}
+::selection{background:#f4e9c8}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:3px}
+
+@media (prefers-reduced-motion: no-preference){
+  @supports (animation-timeline: scroll()){
+    .progress{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--ink);transform-origin:0 50%;
+      transform:scaleX(0);animation:grow linear both;animation-timeline:scroll(root);z-index:60}
+    @keyframes grow{to{transform:scaleX(1)}}
+  }
+  .rv{opacity:0;transform:translateY(12px);animation:rv .55s var(--ease) forwards}
+  @keyframes rv{to{opacity:1;transform:none}}
+}
+
+/* ============ NAV ============ */
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px) saturate(1.1);
+  border-bottom:1px solid var(--line);z-index:20}
+nav .wrap{display:flex;align-items:center;gap:8px;height:66px}
+.wordmark{font-weight:300;font-size:21.5px;letter-spacing:-.048em;color:var(--ink)}
+nav .links{display:flex;gap:2px;margin-left:22px;font-size:14.5px;color:var(--ink-2)}
+nav .links a{padding:9px 12px;border-radius:6px;transition:background var(--dur) var(--ease),color var(--dur) var(--ease)}
+nav .links a:hover{background:var(--paper-2);color:var(--ink)}
+.lang{margin-left:auto;font-family:var(--mono);font-size:12.5px;color:var(--ink-3)}
+.lang b{color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink)}
+/* G2 — actions à l'encre */
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 22px;border-radius:5px;font-size:15px;font-weight:600;
+  transition:background var(--dur) var(--ease),transform var(--dur) var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn-p{background:var(--ink);color:var(--paper)}
+.btn-p:hover{background:#000}
+.btn-s{border:1px solid var(--line-2);color:var(--ink);background:var(--paper)}
+.btn-s:hover{background:var(--paper-2)}
+.mnav{display:none;position:relative;margin-left:auto}
+.mnav summary{list-style:none;cursor:pointer;font-size:22px;line-height:1;padding:10px 12px;border:1px solid var(--line);border-radius:6px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav .panel{position:absolute;right:0;top:calc(100% + 8px);background:var(--paper);border:1px solid var(--line-2);border-radius:10px;box-shadow:0 20px 48px -20px #17151255;padding:10px;min-width:220px;z-index:40}
+.mnav .panel a{display:block;padding:11px 14px;border-radius:6px;font-size:15px}
+.mnav .panel a:hover{background:var(--paper-2)}
+
+/* ============ HERO v6 : l'instrument en scène ============ */
+header{padding:64px 0 76px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ana-t);display:block;margin-bottom:18px}
+.hero-top{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:14px}
+h1{font-size:clamp(30px,3.4vw,45px);line-height:1.06;white-space:nowrap}
+h1 .cite{position:relative}
+h1 .cite::after{content:"";position:absolute;left:.02em;right:.02em;bottom:.05em;height:.32em;background:#f6e7b8;z-index:-1;border-radius:2px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.sub{font-size:17px;color:var(--ink-2);max-width:72ch;margin-bottom:36px}
+
+/* l'instrument : barre de requête + registre pleine largeur, EN CLAIR */
+.inst{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px #17151212,0 28px 70px -48px #17151259;overflow:visible}
+.inst-bar{display:flex;align-items:center;gap:14px;padding:16px 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.inst-q{font-size:16.5px;font-weight:600;color:var(--ink);flex:1;min-width:260px}
+.inst-q .qm{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--ink-3);display:block;text-transform:uppercase;margin-bottom:4px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:11px;padding:7px 12px;min-height:24px;border-radius:6px;background:var(--paper-2);color:var(--ink-2);border:1px solid var(--line);display:inline-flex;align-items:center;white-space:nowrap}
+.chip b{color:var(--ink);margin-left:6px}
+.corpus{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--ink-3);border:1px dashed var(--line-2);border-radius:4px;padding:4px 9px;white-space:nowrap}
+.l-h,.l-r{display:grid;grid-template-columns:1.3fr .85fr .8fr 1fr .85fr;gap:12px;padding:15px 22px;align-items:center;font-size:14.5px}
+.l-h{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);background:var(--paper-2);border-bottom:1px solid var(--line)}
+.l-r{border-bottom:1px solid var(--line);position:relative;min-height:56px;transition:background var(--dur) var(--ease)}
+.l-r:hover,.l-r:focus-within{background:var(--paper-2)}
+.ref{font-family:var(--mono);font-weight:600;font-size:14px;padding-left:10px;border-left:3px solid;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ref.l{color:var(--law-t);border-color:var(--law)} .ref.c{color:var(--case-t);border-color:var(--case)}
+.cell{color:var(--ink-2)} .vig{color:var(--law-t);font-weight:500}
+/* G2 — liens sémantiques : la couleur dit le type de source */
+.olink{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.olink.l{color:var(--law-t);text-decoration-color:#15803d59}
+.olink.c{color:var(--case-t);text-decoration-color:#6d28d959}
+.olink:hover{text-decoration-thickness:2px}
+.sig{font-family:var(--mono);font-size:11.5px;color:var(--ink-3)}
+.hcard{position:absolute;left:16px;right:16px;top:calc(100% - 6px);z-index:9;background:#fff;border:1px solid var(--line-2);border-radius:10px;
+  padding:15px 18px;box-shadow:0 26px 64px -26px #17151266;opacity:0;visibility:hidden;transform:translateY(-4px);
+  transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease),visibility var(--dur)}
+.l-r:hover .hcard,.l-r:focus-within .hcard{opacity:1;visibility:visible;transform:none}
+.hcard .ht{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-bottom:7px}
+/* G3 — la loi parle en serif */
+.hcard .hx{font-family:var(--serif);font-size:15px;line-height:1.55;color:var(--ink)}
+.hcard .hl{display:inline-block;margin-top:9px;font-size:12.5px;font-weight:600}
+.hcard .hl.l{color:var(--law-t)} .hcard .hl.c{color:var(--case-t)}
+.inst-fin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 22px;font-family:var(--mono);font-size:11.5px;color:var(--ink-3);flex-wrap:wrap}
+.inst-fin b{color:var(--ink);font-size:12.5px}
+.redbadge{font-family:var(--mono);font-size:10.5px;padding:5px 10px;border:1px solid var(--red);color:var(--red);border-radius:4px;letter-spacing:.05em;white-space:nowrap}
+.hero-under{margin-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-3)}
+
+/* ============ compteur (nocturne conservé) ============ */
+.proof{background:var(--night);color:#efece5;padding:38px 0;border-bottom:1px solid #2a261e}
+.proof .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;align-items:baseline}
+.pc-date{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a847a;display:block;margin-bottom:10px}
+.pc b{font-family:var(--sans);font-weight:680;letter-spacing:-.02em;font-size:clamp(22px,2.4vw,31px);font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:12px;line-height:1.12;white-space:nowrap}
+.pc span{font-size:13px;color:#a8a294;display:block;margin-top:7px}
+.valid{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;color:#a8a294;border:1px dashed #4a453a;border-radius:4px;padding:3px 8px;flex-shrink:0}
+
+/* ============ sections ============ */
+section{padding:116px 0}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ana-t);display:block;margin-bottom:16px}
+h2{font-size:clamp(28px,3vw,37px);line-height:1.1;margin-bottom:18px}
+.lead{color:var(--ink-2);font-size:17.5px}
+.doc{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:56px;align-items:start}
+.prose p{margin-bottom:1.15em}
+.sidenote{font-size:13px;line-height:1.55;color:var(--ink-3);border-left:2px solid var(--line);padding-left:14px;margin-top:6px}
+.sidenote .sn-ref{font-family:var(--mono);font-size:11px;color:var(--law-t);display:block;margin-bottom:4px}
+.sn-mark{font-family:var(--mono);font-size:11px;color:var(--law-t);vertical-align:super;margin-left:1px}
+.anch{position:relative}
+.anch .pilcrow{position:absolute;left:-26px;top:.18em;font-family:var(--mono);font-size:14px;color:var(--line-2);
+  opacity:0;transition:opacity var(--dur) var(--ease),color var(--dur) var(--ease);cursor:pointer;padding:2px 6px;background:none;border:0;line-height:1}
+.anch:hover .pilcrow,.pilcrow:focus-visible{opacity:1}
+.pilcrow:hover{color:var(--ink)}
+.pilcrow.done{color:var(--law-t)}
+/* G3 — la citation de la loi : serif */
+.q-cite{border-left:3px solid var(--case);background:var(--paper-2);padding:18px 22px;border-radius:0 10px 10px 0;
+  font-family:var(--serif);font-size:17.5px;line-height:1.6;cursor:pointer;transition:background var(--dur) var(--ease)}
+.q-cite:hover{background:var(--paper-3)}
+.q-cite.flash{animation:flash .9s var(--ease)}
+@keyframes flash{0%{background:#f6e7b8}100%{background:var(--paper-3)}}
+.q-cite .src{display:block;margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--case-t)}
+.closing{margin-top:24px;font-family:var(--serif);font-size:17.5px;color:var(--ink);font-style:italic}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.step{border:1px solid var(--line);border-radius:12px;padding:28px;background:#fff}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--ana-t);display:block;margin-bottom:12px;letter-spacing:.06em}
+.step h3{font-size:19px;margin-bottom:9px}
+.step p{font-size:14.5px;color:var(--ink-2)}
+.firewall{margin-top:34px;border-left:3px solid var(--ink);background:#fff;border-radius:0 10px 10px 0;padding:20px 24px;font-size:15.5px;max-width:74ch;box-shadow:0 1px 2px #17151210}
+
+.btable{margin-top:38px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.b-r{display:grid;grid-template-columns:2.2fr .9fr 2fr;gap:16px;padding:15px 22px;border-bottom:1px solid var(--line);align-items:center;font-size:14.5px}
+.b-r:last-child{border:none}
+.b-r.h{background:var(--paper-2);font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3)}
+.b-r b{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:14px;color:var(--ink-3)}
+.bar{height:6px;border-radius:99px;background:var(--line)}
+.b-note{margin-top:18px;font-size:13.5px;color:var(--ink-3)}
+.b-note b{color:var(--ink)}
+
+footer{background:var(--night);color:#a8a294;padding:58px 0 42px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:38px}
+footer h4{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#6f6a5f;margin-bottom:15px}
+footer a{display:block;padding:4px 0;min-height:24px;transition:color var(--dur) var(--ease)}
+footer a:hover{color:#fff}
+.f-mark{font-weight:300;font-size:20px;letter-spacing:-.045em;color:#fff}
+.f-legal{margin-top:38px;padding-top:22px;border-top:1px solid #2a261e;font-size:12.5px;color:#6f6a5f;display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.f-legal span{white-space:nowrap}
+
+@media (max-width:960px){
+  section{padding:78px 0}
+  h1{white-space:normal;font-size:clamp(30px,7.6vw,38px)}
+  .hero-top{flex-direction:column;align-items:flex-start}
+  .doc{grid-template-columns:1fr}
+  .sidenote{border-left:none;border-top:1px solid var(--line);padding:12px 0 0;margin:14px 0 4px}
+  .anch .pilcrow{position:static;opacity:.5;margin-left:8px}
+  .proof .wrap,.steps{grid-template-columns:1fr;gap:26px}
+  footer .cols{grid-template-columns:1fr 1fr}
+  nav .links,nav .lang,nav .btn{display:none}
+  .mnav{display:block}
+  .l-h{display:none}
+  .l-r{grid-template-columns:1fr 1fr;gap:8px;padding:14px 16px}
+  .l-r .cell:nth-child(2){display:none}
+  .inst-bar{padding:14px 16px}
+}
+
+.lang a{color:inherit;padding:2px 3px;border-radius:3px}
+.lang a.on{color:var(--ink);font-weight:700;box-shadow:inset 0 -2px 0 var(--ink)}
+.mnav .mlang{display:flex;gap:6px;padding:10px 14px 6px;border-top:1px solid var(--line);margin-top:8px;font-family:var(--mono);font-size:12px}
+.f-legal .lang a,footer .lang a{display:inline;padding:2px 3px;min-height:0}
+.sec-h2{margin-top:56px}
+.gen p{margin-bottom:1.05em;color:var(--ink-2)}
+.gen .valbadge{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ink-3);border:1px dashed var(--line-2);border-radius:4px;padding:2px 8px;white-space:nowrap}
+.gen ol{margin:14px 0 0 20px}
+.gen ol li{margin-bottom:10px;color:var(--ink-2)}
+main{display:block}
+</style></head><body><div class="progress" aria-hidden="true"></div>
+<nav aria-label="Navigation"><div class="wrap">
+  <a class="wordmark" href="index.html">LexTutor</a>
+  <div class="links"><a href="plateforme.html" aria-current="page">Plattform</a><a href="solutions.html">Lösungen</a><a href="bench.html">Bench</a><a href="securite.html">Sicherheit</a></div>
+  <span class="lang"><a href="../fr/plateforme.html" hreflang="fr">FR</a> · <a class="on" href="../de/plateforme.html" hreflang="de">DE</a> · <a href="../it/plateforme.html" hreflang="it">IT</a> · <a href="../en/plateforme.html" hreflang="en">EN</a></span>
+  <a class="btn btn-p" href="contact.html" style="margin-left:16px">Demo anfragen</a>
+  <details class="mnav"><summary aria-label="Menu">☰</summary><div class="panel"><a href="plateforme.html">Plattform</a><a href="solutions.html">Lösungen</a><a href="bench.html">Bench</a><a href="securite.html">Sicherheit</a><a href="tarifs.html">Preise</a><a href="methodologie.html">Methodik</a><a href="a-propos.html">Über uns</a><a href="contact.html">Kontakt</a><div class="mlang"><a href="../fr/plateforme.html" hreflang="fr">FR</a> · <a class="on" href="../de/plateforme.html" hreflang="de">DE</a> · <a href="../it/plateforme.html" hreflang="it">IT</a> · <a href="../en/plateforme.html" hreflang="en">EN</a></div></div></details>
+</div></nav><main class="gen"><section><div class="wrap"><span class="kicker rv">Plattform</span><h2>Was zwischen Ihrer Frage und dem Beweis geschieht.</h2><p class="rv">Architektur</p><p class="rv">LexTutor ist kein Sprachmodell, das auf einer Dokumentensammlung sitzt. Es ist eine juristische Pipeline in zehn Schritten, in der die Generierung erst einsetzt, nachdem die Quellen zusammengestellt, gesteuert und verifiziert sind. Diese Seite beschreibt die fünf Schichten dieser Pipeline — in der Reihenfolge, in der Ihre Frage sie durchläuft.</p><h2 class="sec-h2 rv">Verifikation</h2><p class="rv">Die Frage wird so analysiert, wie ein Jurist sie lesen würde: betroffene Rechtsgebiete, anwendbare Erlasse, Sprache, Kanton. Das System unterscheidet, was der Buchstabe allein verwechselt — OR Art. 368 betrifft die Mängel des Werkes, ZGB Art. 368 den Erwachsenenschutz. Eine kurze Frage und ein Sachverhalt über drei Seiten gehen nicht denselben Weg: Die Analysetiefe passt sich der Komplexität der Anfrage an.</p><p class="rv">Mehrere Suchwege laufen zusammen — semantisch, lexikalisch, terminologisch und über den Zitationsgraphen — über die eidgenössischen und kantonalen Korpora. Der terminologische Weg stützt sich auf den dreisprachigen juristischen Thesaurus des Bundesgerichts: Ein auf Deutsch formulierter Begriff findet seine französischen und italienischen Entsprechungen. Der Graph folgt den Verbindungen zwischen Bestimmungen und Entscheiden und holt Quellen ein, die eine Stichwortsuche nie sieht.</p><p class="rv">Die kritischen Bestimmungen des Rechtsgebiets sind im Dossier garantiert vorhanden; Rauschen wird ausgeschieden; die Normenhierarchie wird respektiert. Das Dossier bleibt bewusst begrenzt: Eine überschaubare Zahl gelesener Quellen ist mehr wert als eine Anhäufung, die niemand kontrolliert. Diese Schicht — nicht das Modell — entscheidet, was in Ihr Dossier gelangt.</p><p class="rv">Das Modell schreibt unter einer strikten Vorgabe: Jede Aussage muss sich auf eine Quelle aus dem Dossier stützen — nie umgekehrt. Es darf nicht aus seinem Trainingswissen ergänzen, was die Quellen nicht sagen. Lässt das Dossier einen Punkt offen, sagt die Analyse das ausdrücklich.</p><p class="rv">Vor der Anzeige wird jedes Zitat gegen den Graphen geprüft: Die Bestimmung existiert, der Entscheid existiert, die Referenz ist exakt. Was nicht verifizierbar ist, wird als solches gekennzeichnet — weder versteckt noch umformuliert. Jede Quelle im Register trägt ihren Link auf Fedlex oder auf die Website des Bundesgerichts: Die Kontrolle liegt bei Ihnen.</p><h2 class="sec-h2 rv">Das Quellenregister, im Detail.</h2><p class="rv">Artikel oder Entscheid, Normstufe, Geltungsstand zum Zeitpunkt der Analyse, Link zur offiziellen Quelle, Warnsignale — abgegrenzter Entscheid, abweichende Lehre, laufende Revision. Exportierbar, zitierfähig, belastbar. Was die Gegenseite prüfen wird, haben Sie bereits geprüft.</p><p class="rv">Quelle` · `Normstufe` · `Geltung` · `Offizieller Link` · `Signal</p><h2 class="sec-h2 rv">Der Autoritätsgraph.</h2><p class="rv"><span class="valbadge">IN VALIDIERUNG</span> Verbindungen zwischen Bestimmungen und Entscheiden. Der Graph dekoriert nicht: Er entscheidet, welche Quellen in Ihr Dossier gelangen, und macht jene sichtbar, die eine klassische Suche verpasst.</p><h2 class="sec-h2 rv">Drei Sprachen, ein Recht.</h2><p class="rv">Ein einziger Kanon pro Erlass — OR und CO bezeichnen dasselbe Gesetz, nicht zwei parallele Korpora. Ihre Fragen auf Deutsch, Französisch oder Italienisch führen zu denselben Quellen, ohne Verlust und ohne Abweichung.</p><h2 class="sec-h2 rv">Modi, durch die Architektur getrennt.</h2><p class="rv">Recherche, Pro und JurisExpress sind getrennte Pfade: Was der schnellen Triage dient, beeinträchtigt nie die belastbare Analyse — und umgekehrt.</p><h2 class="sec-h2 rv">Technische Fragen.</h2><p class="rv">Welche Quellen sind abgedeckt?</p><p class="rv">Das geltende Bundesrecht — Gesetzbücher, Gesetze, Verordnungen — und die Rechtsprechung des Bundesgerichts, ergänzt durch kantonale Korpora im Ausbau. Abdeckung im Detail: <span class="valbadge">IN VALIDIERUNG</span> Gesetze und Verordnungen, <span class="valbadge">IN VALIDIERUNG</span> indexierte Entscheide, abgedeckte Kantone <span class="valbadge">IN VALIDIERUNG</span>. Die Lehre ist zurzeit nicht integriert.</p><p class="rv">Wie wird das Korpus aktualisiert?</p><p class="rv">Fedlex und die offiziellen kantonalen Gesetzessammlungen sind die einzigen Referenzen für den Stand des Rechts. Jede Quelle im Register zeigt ihren Geltungsstand zum Zeitpunkt der Analyse; eine aufgehobene oder revidierte Bestimmung wird als solche gekennzeichnet. Synchronisationsrhythmus: <span class="valbadge">IN VALIDIERUNG</span>.</p><p class="rv">Welche Sprachen werden unterstützt?</p><p class="rv">Deutsch, Französisch und Italienisch, auf einem einzigen Kanon pro Erlass: SchKG, LP und LEF bezeichnen denselben Erlass, nicht drei Korpora. Die juristische Terminologie ist über den dreisprachigen Thesaurus des Bundesgerichts zwischen den drei Sprachen abgeglichen.</p><p class="rv">Welche Grenzen sind bewusst gesetzt?</p><p class="rv">LexTutor deckt zurzeit weder die Lehre noch alle sechsundzwanzig Kantone ab. Es ersetzt nicht das Urteil der Anwältin oder des Anwalts: Es bereitet das Beweisdossier vor, es plädiert nicht. Vor allem benennt es, was es nicht weiss — ein Punkt, den die Quellen nicht entscheiden lassen, wird als offen ausgewiesen, nicht aufgefüllt. Ein Werkzeug, das seine Grenzen kennt, ist ein Werkzeug, das man vor Gericht verwenden kann.</p><p class="rv">Was unterscheidet LexTutor von einem generischen Chatbot?</p><p class="rv">Ein generischer Chatbot generiert zuerst und zitiert manchmal. Bei LexTutor setzt die Generierung erst ein, nachdem die Quellen zusammengestellt, gesteuert und verifiziert sind: Das Modell schreibt auf der Grundlage eines kontrollierten Dossiers, unter Zitierpflicht, und jede Referenz wird vor der Anzeige geprüft. Keine Antwort. Ein Beweisdossier.</p><p class="rv">Sehen Sie das Quellenregister zu Ihrer eigenen Frage.</p><p class="rv">Demo anfragen</p></div></section></main><footer><div class="wrap">
+  <div class="cols">
+    <div><div class="f-mark">LexTutor</div><p style="margin-top:13px;font-size:13.5px;max-width:34ch">Schweizer Recht. Mit Beweisen belegt. Powered by Claude (Anthropic) · Proprietäre Verifikations-Pipeline.</p></div>
+    <div><h4>Produkt</h4><a href="plateforme.html">Plattform</a><a href="solutions.html">Lösungen</a><a href="securite.html">Sicherheit</a></div>
+    <div><h4>Ressourcen</h4><a href="bench.html">Bench</a><a href="methodologie.html">Methodik</a><a href="tarifs.html">Preise</a><a href="a-propos.html">Über uns</a></div>
+    <div><h4>Rechtliches</h4><a href="mentions-legales.html">Impressum</a><a href="protection-donnees.html">Datenschutz</a><a href="contact.html">Kontakt</a></div>
+  </div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a class="on" href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Rechtsträger: in Validierung</span></div>
+</div></footer>
+<script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>
