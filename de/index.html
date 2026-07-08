@@ -200,6 +200,8 @@ footer a:hover{color:#fff}
 .sec-h2{margin-top:56px}
 .gen p{margin-bottom:1.05em;color:var(--ink-2)}
 .gen .valbadge{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ink-3);border:1px dashed var(--line-2);border-radius:4px;padding:2px 8px;white-space:nowrap}
+a.valbadge{text-decoration:none;cursor:pointer;transition:border-color .15s,color .15s}
+a.valbadge:hover,a.valbadge:focus-visible{border-style:solid;border-color:var(--ink-3);color:var(--ink)}
 .gen ol{margin:14px 0 0 20px}
 .gen ol li{margin-bottom:10px;color:var(--ink-2)}
 main{display:block}
@@ -253,8 +255,8 @@ v.addEventListener('play',upd);v.addEventListener('pause',upd);
 if(auto){var p=v.play();if(p&&p.catch)p.catch(function(){upd()})}
 upd()})();</script>
 <div class="proof"><div class="wrap">
-  <div class="pc rv"><span class="pc-date">Korpus geprüft am 8. Juli 2026</span><b class="num">— <span class="valid">IN VALIDIERUNG</span></b><span>eidgenössische und kantonale Erlasse in Kraft, indexiert</span></div>
-  <div class="pc rv"><span class="pc-date">&nbsp;</span><b class="num">— <span class="valid">IN VALIDIERUNG</span></b><span>Gerichtsentscheide, mit dem Graphen verknüpft</span></div>
+  <div class="pc rv"><span class="pc-date">Korpus geprüft am 8. Juli 2026</span><b class="num">— <span class="valid">AUF ANFRAGE</span></b><span>eidgenössische und kantonale Erlasse in Kraft, indexiert</span></div>
+  <div class="pc rv"><span class="pc-date">&nbsp;</span><b class="num">— <span class="valid">AUF ANFRAGE</span></b><span>Gerichtsentscheide, mit dem Graphen verknüpft</span></div>
   <div class="pc rv"><span class="pc-date">PUBLIKATION WIRD AUF DIESER SEITE ANGEKÜNDIGT</span><b>1 Aussage = 1 Zitat</b><span>Protokoll eingefroren am 08.07.2026 — nie eine Schätzung, nie eine unvalidierte Zahl</span></div>
 </div></div>
 <main><section><div class="wrap" style="text-align:center">
@@ -267,6 +269,6 @@ upd()})();</script>
     <div><h4>Ressourcen</h4><a href="bench.html">Bench</a><a href="methodologie.html">Methodik</a><a href="tarifs.html">Preise</a><a href="a-propos.html">Über uns</a></div>
     <div><h4>Rechtliches</h4><a href="mentions-legales.html">Impressum</a><a href="protection-donnees.html">Datenschutz</a><a href="contact.html">Kontakt</a></div>
   </div>
-  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a class="on" href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Rechtsträger: in Validierung</span></div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a class="on" href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Rechtsträger: siehe Impressum</span></div>
 </div></footer>
 <script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>

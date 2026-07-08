@@ -200,6 +200,8 @@ footer a:hover{color:#fff}
 .sec-h2{margin-top:56px}
 .gen p{margin-bottom:1.05em;color:var(--ink-2)}
 .gen .valbadge{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ink-3);border:1px dashed var(--line-2);border-radius:4px;padding:2px 8px;white-space:nowrap}
+a.valbadge{text-decoration:none;cursor:pointer;transition:border-color .15s,color .15s}
+a.valbadge:hover,a.valbadge:focus-visible{border-style:solid;border-color:var(--ink-3);color:var(--ink)}
 .gen ol{margin:14px 0 0 20px}
 .gen ol li{margin-bottom:10px;color:var(--ink-2)}
 main{display:block}
@@ -253,8 +255,8 @@ v.addEventListener('play',upd);v.addEventListener('pause',upd);
 if(auto){var p=v.play();if(p&&p.catch)p.catch(function(){upd()})}
 upd()})();</script>
 <div class="proof"><div class="wrap">
-  <div class="pc rv"><span class="pc-date">Corpus verified on 8 July 2026</span><b class="num">— <span class="valid">UNDER VALIDATION</span></b><span>federal and cantonal acts in force, indexed</span></div>
-  <div class="pc rv"><span class="pc-date">&nbsp;</span><b class="num">— <span class="valid">UNDER VALIDATION</span></b><span>court decisions linked to the graph</span></div>
+  <div class="pc rv"><span class="pc-date">Corpus verified on 8 July 2026</span><b class="num">— <span class="valid">ON REQUEST</span></b><span>federal and cantonal acts in force, indexed</span></div>
+  <div class="pc rv"><span class="pc-date">&nbsp;</span><b class="num">— <span class="valid">ON REQUEST</span></b><span>court decisions linked to the graph</span></div>
   <div class="pc rv"><span class="pc-date">PUBLICATION ANNOUNCED ON THIS PAGE</span><b>1 proposition = 1 citation</b><span>protocol frozen on 08.07.2026 — never an estimate, never an unvalidated figure</span></div>
 </div></div>
 <main><section><div class="wrap" style="text-align:center">
@@ -267,6 +269,6 @@ upd()})();</script>
     <div><h4>Resources</h4><a href="bench.html">Bench</a><a href="methodologie.html">Methodology</a><a href="tarifs.html">Pricing</a><a href="a-propos.html">About</a></div>
     <div><h4>Legal</h4><a href="mentions-legales.html">Legal notice</a><a href="protection-donnees.html">Data protection</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a class="on" href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Legal entity: under validation</span></div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a class="on" href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Legal entity: see legal notice</span></div>
 </div></footer>
 <script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>
