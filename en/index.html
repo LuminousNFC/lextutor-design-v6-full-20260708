@@ -203,6 +203,15 @@ footer a:hover{color:#fff}
 .gen ol{margin:14px 0 0 20px}
 .gen ol li{margin-bottom:10px;color:var(--ink-2)}
 main{display:block}
+.vband{padding:30px 0 6px}
+.vband .vb-bar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.vband .vb-k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.vband .vb-t{font-size:clamp(17px,2vw,21px);font-weight:680;letter-spacing:-.022em}
+.vband .vwrap{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fdfcf9;box-shadow:0 22px 60px -34px rgba(23,21,18,.28)}
+.vband video{width:100%;height:auto;display:block}
+.vband .vbtn{position:absolute;right:12px;bottom:12px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:7px 14px;border:1px solid var(--line-2);border-radius:6px;background:rgba(253,252,249,.94);color:var(--ink);cursor:pointer}
+.vband .vbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.vband .vb-note{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--ink-3);margin-top:10px}
 </style></head><body><div class="progress" aria-hidden="true"></div>
 <nav aria-label="Navigation"><div class="wrap">
   <a class="wordmark" href="index.html">LexTutor</a>
@@ -224,6 +233,25 @@ main{display:block}
   </div>
   <div class="hero-under rv"><span>Sources visible · private demonstration · no client data</span></div>
 </div></header>
+
+<section class="vband"><div class="wrap">
+  <div class="vb-bar rv"><span class="vb-k">The product, in 35 seconds</span><span class="vb-t">The evidence file builds itself.</span></div>
+  <div class="vwrap rv">
+    <video id="pv" muted loop playsinline preload="metadata" poster="../media/lextutor-intro-v4-poster.png" aria-label="Demonstration: the LexTutor evidence file builds itself — question, sources, practitioner analysis, verification on Fedlex and BGER">
+      <source src="../media/lextutor-intro-v4.webm" type="video/webm">
+      <source src="../media/lextutor-intro-v4.mp4" type="video/mp4">
+    </video>
+    <button id="pvb" class="vbtn" type="button" data-pause="Pause" data-play="Play">Pause</button>
+  </div>
+  <div class="vb-note rv">Muted video, looping — the same sources as the file above.</div>
+</div></section>
+<script>(function(){var v=document.getElementById('pv'),b=document.getElementById('pvb');if(!v||!b)return;
+var auto=matchMedia('(prefers-reduced-motion: no-preference)').matches&&innerWidth>=700;
+function upd(){b.textContent=v.paused?b.dataset.play:b.dataset.pause}
+b.addEventListener('click',function(){if(v.paused){v.play()}else{v.pause()}});
+v.addEventListener('play',upd);v.addEventListener('pause',upd);
+if(auto){var p=v.play();if(p&&p.catch)p.catch(function(){upd()})}
+upd()})();</script>
 <div class="proof"><div class="wrap">
   <div class="pc rv"><span class="pc-date">Corpus verified on 8 July 2026</span><b class="num">— <span class="valid">UNDER VALIDATION</span></b><span>federal and cantonal acts in force, indexed</span></div>
   <div class="pc rv"><span class="pc-date">&nbsp;</span><b class="num">— <span class="valid">UNDER VALIDATION</span></b><span>court decisions linked to the graph</span></div>
