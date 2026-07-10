@@ -235,7 +235,101 @@ main{display:block}
 @keyframes lxp{0%{opacity:.6;transform:scale(.6)}100%{opacity:0;transform:scale(1.7)}}
 @keyframes lxw{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion: reduce){#lxintro{display:none}}
-</style></head><body><div id="lxintro" aria-hidden="true"><div class="lxi-box">
+/* v6 référence — consolidation H-A / P-A validée le 10.07.2026 */
+.home-ref::before,.platform-ref::before{display:none}
+.home-ref .progress,.platform-ref .progress{display:none!important}
+.home-ref .rv,.platform-ref .rv{opacity:1!important;transform:none!important;animation:none!important}
+.home-ref nav,.platform-ref nav{background:var(--paper);backdrop-filter:none}
+.home-ref .lang a,.platform-ref .lang a{min-width:24px;min-height:24px;display:inline-flex;align-items:center;justify-content:center}
+.home-ref .olink{min-height:24px;display:inline-flex;align-items:center}
+.inst{border-radius:4px;box-shadow:none;overflow:hidden}
+.chip{background:transparent;border-radius:3px;padding:5px 8px}
+.corpus{border-radius:2px}
+.inst-fin{justify-content:flex-start}
+.inst-fin b{font-size:12px}
+.ledger-more{border-bottom:1px solid var(--line)}
+.ledger-more>summary{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 22px;cursor:pointer;color:var(--ink-2);font-family:var(--mono);font-size:11px;list-style:none;background:var(--paper-2)}
+.ledger-more>summary::-webkit-details-marker{display:none}
+.ledger-more>summary::after{content:"+";font-size:16px;color:var(--ink)}
+.ledger-more[open]>summary::after{content:"−"}
+.ledger-more .l-r:last-child{border-bottom:0}
+.vband video{background:var(--paper-2)}
+
+.platform-ref .wrap{max-width:1200px}
+.platform-intro{padding:82px 0 68px;border-bottom:1px solid var(--line)}
+.platform-intro h1{max-width:930px;white-space:normal;font-size:clamp(42px,5.3vw,72px);line-height:1;letter-spacing:-.05em}
+.platform-intro .sub{max-width:760px;margin:24px 0 0;font-size:18px;line-height:1.6}
+.platform-layout{display:grid;grid-template-columns:180px minmax(0,1fr);gap:48px;padding-top:72px}
+.platform-index{position:sticky;top:92px;align-self:start;display:grid}
+.platform-index a{display:grid;grid-template-columns:30px 1fr;gap:8px;min-height:44px;align-items:center;border-bottom:1px solid var(--line);color:var(--ink-3);font-family:var(--mono);font-size:10px}
+.platform-index a:hover,.platform-index a:focus-visible{color:var(--ink)}
+.platform-main{min-width:0}
+.platform-layer{scroll-margin-top:86px;padding:72px 0;border-bottom:1px solid var(--line)}
+.platform-layer:first-child{padding-top:0}
+.platform-layer-grid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(230px,.9fr);gap:44px;align-items:start}
+.platform-step{display:block;margin-bottom:13px;color:var(--ana-t);font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+.platform-layer h2,.platform-section h2{font-size:clamp(32px,3.5vw,48px);line-height:1.04}
+.platform-copy{color:var(--ink-2);font-size:17px;line-height:1.65}
+.platform-ref .valbadge{display:inline-flex;align-items:center;min-height:24px;padding:2px 8px;border:1px dashed var(--line-2);border-radius:2px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-decoration:none}
+.platform-status{display:block;margin:14px 0 10px}
+.platform-artifact{border:1px solid var(--line);background:#fff}
+.platform-artifact-title{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.platform-artifact-body{padding:12px}
+.platform-artifact-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:11px}
+.platform-artifact-row:last-child{border-bottom:0}
+.platform-artifact-row b{font-family:var(--mono);font-size:10px;text-align:right}
+.platform-artifact-row .law-text{color:var(--law-t)}
+.platform-artifact-row .case-text{color:var(--case-t)}
+.platform-artifact-row .ana-text{color:var(--ana-t)}
+.platform-section{padding:80px 0;border-bottom:1px solid var(--line)}
+.platform-section.tint{margin-left:0;margin-right:0;padding-left:24px;padding-right:24px;background:var(--paper-2)}
+.authority-map{display:grid;grid-template-columns:minmax(145px,.8fr) 66px minmax(180px,1.15fr) 66px minmax(180px,1fr) 66px minmax(145px,.78fr);align-items:stretch;min-height:320px;margin-top:30px;padding:26px;border:1px solid var(--line);background:var(--paper-2)}
+.authority-col{display:flex;flex-direction:column;gap:9px}
+.authority-col-title{min-height:28px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.authority-node{min-height:56px;display:flex;flex-direction:column;justify-content:center;padding:10px 11px;border:1px solid var(--line);border-left:4px solid var(--ink);background:#fff}
+.authority-node strong{font-family:var(--mono);font-size:10.5px;line-height:1.35}
+.authority-node small{margin-top:3px;color:var(--ink-3);font-size:9.5px}
+.authority-node.law{border-left-color:var(--law)}.authority-node.law strong{color:var(--law-t)}
+.authority-node.case{border-left-color:var(--case)}.authority-node.case strong{color:var(--case-t)}
+.authority-node.analysis{margin-top:28px;border-left-color:var(--ana)}.authority-node.analysis strong{color:var(--ana-t)}
+.authority-link{position:relative;display:flex;align-items:center;justify-content:center;min-width:0}
+.authority-link::before{content:"";position:absolute;left:8px;right:12px;top:51%;height:1px;background:#918b81}
+.authority-link::after{content:"";position:absolute;right:7px;top:calc(51% - 4px);width:7px;height:7px;border-top:1px solid #918b81;border-right:1px solid #918b81;transform:rotate(45deg)}
+.authority-link span{position:relative;z-index:1;margin-top:-40px;padding:3px 5px;color:var(--ink-2);background:var(--paper-2);font-family:var(--mono);font-size:8.5px;text-align:center}
+.authority-note{display:grid;grid-template-columns:1fr auto;gap:20px;padding:13px;border:1px solid var(--line);border-top:0;background:#fff;color:var(--ink-2);font-size:11.5px}
+.authority-note b{font-family:var(--mono);font-size:10px}
+.authority-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;color:var(--ink-3);font-family:var(--mono);font-size:9px}
+.authority-legend i{display:inline-block;width:8px;height:8px;margin-right:5px;background:var(--law)}
+.authority-legend i.case{background:var(--case)}.authority-legend i.analysis{background:var(--ana)}
+.platform-faq{margin-top:28px;border-top:1px solid var(--line)}
+.platform-faq details{border-bottom:1px solid var(--line)}
+.platform-faq summary{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-weight:650;list-style:none}
+.platform-faq summary::-webkit-details-marker{display:none}
+.platform-faq summary::after{content:"+";font-family:var(--mono);font-size:16px}
+.platform-faq details[open] summary::after{content:"−"}
+.platform-faq p{padding:0 0 24px;color:var(--ink-2)}
+.platform-cta{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+
+@media(max-width:960px){
+  .ledger-more>summary{padding:10px 16px}
+  .platform-intro{padding:56px 0 46px}
+  .platform-layout{grid-template-columns:1fr;padding-top:42px}
+  .platform-index{position:static;grid-template-columns:repeat(5,1fr);gap:0}
+  .platform-index a{display:flex;justify-content:center;border:1px solid var(--line);border-right:0}
+  .platform-index a:last-child{border-right:1px solid var(--line)}
+  .platform-index a span:last-child{display:none}
+  .platform-layer-grid{grid-template-columns:1fr;gap:24px}
+  .platform-layer{padding:48px 0}
+  .platform-section{padding-top:56px;padding-bottom:56px}
+  .platform-section.tint{margin-left:0;margin-right:0;padding-left:0;padding-right:0;background:transparent}
+  .authority-map{grid-template-columns:1fr;min-height:0;padding:18px;gap:16px}
+  .authority-link{min-height:32px;justify-content:flex-start;padding-left:12px;border-left:1px solid #918b81}
+  .authority-link::before,.authority-link::after{display:none}
+  .authority-link span{margin:0;padding-left:8px}
+  .authority-node.analysis{margin-top:0}
+  .authority-note,.platform-cta{grid-template-columns:1fr}
+}
+</style></head><body class="home-ref"><div id="lxintro" aria-hidden="true"><div class="lxi-box">
 <svg class="lxmark lxi-anim" viewBox="-4 -4 72 72" width="88" height="88" aria-hidden="true">
 <path class="c c1" style="--dx:-7px;--dy:-7px" d="M0 0 h20 v4 h-16 v16 h-4 z" fill="currentColor"/>
 <path class="c c2" style="--dx:7px;--dy:-7px" d="M64 0 h-20 v4 h16 v16 h4 z" fill="currentColor"/>
@@ -269,11 +363,12 @@ setTimeout(function(){if(o.parentNode)o.remove()},2800)})();</script><div class=
   <h1 class="rv">Pas une IA qui devine. <span class="cite">Une IA qui cite.</span></h1>
   <p class="sub rv" style="margin-top:16px">Le droit suisse, vérifiable à la source — chaque proposition est citée, chaque citation renvoie à sa publication officielle. Ci-dessous : un dossier de preuve réel, tel que LexTutor le produit.</p>
   <div class="hero-ctas rv" style="margin-bottom:40px"><a class="btn btn-p" href="contact.html">Essayer sur un cas public</a><a class="btn btn-s" href="contact.html">Demander une démo</a></div>
-  <div class="inst rv" role="region">
+  <div class="inst rv" role="table" aria-label="Dossier de preuve constitué — 1 proposition = 1 citation">
     <div class="inst-bar"><div class="inst-q"><span class="qm">Question</span>Défauts de construction et droits du maître de l'ouvrage</div><div class="chips"><span class="chip">Canton <b>VD</b></span><span class="chip">Domaine <b>Entreprise</b></span><span class="chip">Langue <b>FR</b></span></div><span class="corpus">CORPUS PUBLIC · DÉMONSTRATION STATIQUE</span></div>
-    <div class="l-h" role="row"><span>Source</span><span>Rang normatif</span><span>Vigueur</span><span>Lien officiel</span><span>Signal</span></div>
-    <div class="l-r" role="row"><span class="ref l">CO art. 367</span><span class="cell">Loi fédérale</span><span class="vig">En vigueur</span><a class="olink l" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr" rel="noopener" target="_blank">Fedlex ↗</a><span class="sig">—</span></div><div class="l-r" role="row"><span class="ref l">CO art. 368</span><span class="cell">Loi fédérale</span><span class="vig">En vigueur</span><a class="olink l" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr" rel="noopener" target="_blank">Fedlex ↗</a><span class="sig">Norme centrale</span></div><div class="l-r" role="row"><span class="ref l">CO art. 371 al. 2</span><span class="cell">Loi fédérale</span><span class="vig">En vigueur</span><a class="olink l" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr" rel="noopener" target="_blank">Fedlex ↗</a><span class="sig">Délai de garantie</span></div><div class="l-r" role="row"><span class="ref c">ATF 136 III 273</span><span class="cell">Tribunal fédéral</span><span class="vig">Arrêt publié</span><a class="olink c" href="http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-III-273" rel="noopener" target="_blank">Recueil officiel ↗</a><span class="sig">Leitentscheid</span></div><div class="l-r" role="row"><span class="ref c">ATF 130 III 362</span><span class="cell">Tribunal fédéral</span><span class="vig">Arrêt publié</span><a class="olink c" href="http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-130-III-362" rel="noopener" target="_blank">Recueil officiel ↗</a><span class="sig">Prescription</span></div>
-    <div class="inst-fin"><b>Dossier de preuve constitué — 1 proposition = 1 citation</b><span>Survolez une ligne : l'extrait exact apparaît ↑</span><span class="redbadge">◆ HÉBERGÉ EN SUISSE</span></div>
+    <div class="l-h" role="row"><span role="columnheader">Source</span><span role="columnheader">Rang normatif</span><span role="columnheader">Vigueur</span><span role="columnheader">Lien officiel</span><span role="columnheader">Signal</span></div>
+    <div class="l-r" role="row" aria-label="CO art. 367, Loi fédérale, En vigueur, Fedlex ↗, —"><span class="ref l" role="cell">CO art. 367</span><span class="cell" role="cell">Loi fédérale</span><span class="vig" role="cell">En vigueur</span><span role="cell"><a class="olink l" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr" rel="noopener" target="_blank">Fedlex ↗</a></span><span class="sig" role="cell">—</span></div><div class="l-r" role="row" aria-label="CO art. 368, Loi fédérale, En vigueur, Fedlex ↗, Norme centrale"><span class="ref l" role="cell">CO art. 368</span><span class="cell" role="cell">Loi fédérale</span><span class="vig" role="cell">En vigueur</span><span role="cell"><a class="olink l" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr" rel="noopener" target="_blank">Fedlex ↗</a></span><span class="sig" role="cell">Norme centrale</span></div><div class="l-r" role="row" aria-label="ATF 136 III 273, Tribunal fédéral, Arrêt publié, Recueil officiel ↗, Leitentscheid"><span class="ref c" role="cell">ATF 136 III 273</span><span class="cell" role="cell">Tribunal fédéral</span><span class="vig" role="cell">Arrêt publié</span><span role="cell"><a class="olink c" href="http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-136-III-273" rel="noopener" target="_blank">Recueil officiel ↗</a></span><span class="sig" role="cell">Leitentscheid</span></div>
+    <details class="ledger-more"><summary>2 sources complémentaires</summary><div class="l-r" role="row" aria-label="CO art. 371 al. 2, Loi fédérale, En vigueur, Fedlex ↗, Délai de garantie"><span class="ref l" role="cell">CO art. 371 al. 2</span><span class="cell" role="cell">Loi fédérale</span><span class="vig" role="cell">En vigueur</span><span role="cell"><a class="olink l" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr" rel="noopener" target="_blank">Fedlex ↗</a></span><span class="sig" role="cell">Délai de garantie</span></div><div class="l-r" role="row" aria-label="ATF 130 III 362, Tribunal fédéral, Arrêt publié, Recueil officiel ↗, Prescription"><span class="ref c" role="cell">ATF 130 III 362</span><span class="cell" role="cell">Tribunal fédéral</span><span class="vig" role="cell">Arrêt publié</span><span role="cell"><a class="olink c" href="http://relevancy.bger.ch/cgi-bin/JumpCGI?id=BGE-130-III-362" rel="noopener" target="_blank">Recueil officiel ↗</a></span><span class="sig" role="cell">Prescription</span></div></details>
+    <div class="inst-fin"><b>Dossier de preuve constitué — 1 proposition = 1 citation</b></div>
   </div>
   <div class="hero-under rv"><span>Sources visibles · démonstration privée · aucune donnée client</span></div>
 </div></header>
@@ -281,20 +376,18 @@ setTimeout(function(){if(o.parentNode)o.remove()},2800)})();</script><div class=
 <section class="vband"><div class="wrap">
   <div class="vb-bar rv"><span class="vb-k">Le produit, en 35 secondes</span><span class="vb-t">Le dossier de preuve se construit.</span></div>
   <div class="vwrap rv">
-    <video id="pv" muted loop playsinline preload="metadata" poster="../media/lextutor-intro-v4-poster.png" aria-label="Démonstration : le dossier de preuve LexTutor se construit — question, sources, analyse praticienne, contrôle Fedlex et BGER">
+    <video id="pv" muted loop playsinline preload="none" poster="../media/lextutor-intro-v4-poster.png" aria-label="Démonstration : le dossier de preuve LexTutor se construit — question, sources, analyse praticienne, contrôle Fedlex et BGER">
       <source src="../media/lextutor-intro-v4.webm" type="video/webm">
       <source src="../media/lextutor-intro-v4.mp4" type="video/mp4">
     </video>
-    <button id="pvb" class="vbtn" type="button" data-pause="Pause" data-play="Lecture">Pause</button>
+    <button id="pvb" class="vbtn" type="button" data-pause="Pause" data-play="Lecture">Lecture</button>
   </div>
   <div class="vb-note rv">Vidéo muette, en boucle — mêmes sources que le dossier ci-dessus.</div>
 </div></section>
 <script>(function(){var v=document.getElementById('pv'),b=document.getElementById('pvb');if(!v||!b)return;
-var auto=matchMedia('(prefers-reduced-motion: no-preference)').matches&&innerWidth>=700;
 function upd(){b.textContent=v.paused?b.dataset.play:b.dataset.pause}
 b.addEventListener('click',function(){if(v.paused){v.play()}else{v.pause()}});
 v.addEventListener('play',upd);v.addEventListener('pause',upd);
-if(auto){var p=v.play();if(p&&p.catch)p.catch(function(){upd()})}
 upd()})();</script>
 <div class="proof"><div class="wrap">
   <div class="pc rv"><span class="pc-date">Corpus vérifié au 8 juillet 2026</span><b class="num">— <span class="valid">SUR RENDEZ-VOUS</span></b><span>articles fédéraux et cantonaux en vigueur, indexés</span></div>
