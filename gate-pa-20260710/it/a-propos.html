@@ -255,7 +255,7 @@ main{display:block}
 .ledger-more .l-r:last-child{border-bottom:0}
 .vband video{background:var(--paper-2)}
 
-.platform-ref .wrap{max-width:1200px}
+.platform-ref .wrap{max-width:1120px}
 .platform-intro{padding:82px 0 68px;border-bottom:1px solid var(--line)}
 .platform-intro h1{max-width:930px;white-space:normal;font-size:clamp(42px,5.3vw,72px);line-height:1;letter-spacing:-.05em}
 .platform-intro .sub{max-width:760px;margin:24px 0 0;font-size:18px;line-height:1.6}
@@ -317,7 +317,8 @@ main{display:block}
 .editorial-ref .hero-ctas{margin-top:28px;margin-bottom:0}
 .editorial-ref .platform-layout{padding-bottom:72px}
 .editorial-ref .platform-index a{grid-template-columns:30px minmax(0,1fr)}
-.editorial-ref .platform-index a span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.editorial-ref .platform-index a{align-items:start;padding:11px 0;line-height:1.35}
+.editorial-ref .platform-index a span:last-child{overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}
 .editorial-main{border-top:1px solid var(--line)}
 .editorial-section{scroll-margin-top:86px;padding:68px 0;border-bottom:1px solid var(--line)}
 .editorial-section:first-child{border-top:0}
@@ -357,8 +358,9 @@ main{display:block}
 .measure-table th{color:var(--ink-3);background:var(--paper-2);font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase}
 .measure-table td:not(:first-child),.measure-table th:not(:first-child){width:12%;text-align:center;font-family:var(--mono)}
 .flow-register li{grid-template-columns:34px minmax(170px,.65fr) minmax(0,1.35fr)}
-.flow-register li>span{display:contents}
-.flow-register li>span>b{color:var(--ink);font-family:var(--mono);font-size:11px}
+.flow-register .flow-title{grid-column:2;color:var(--ink);font-family:var(--mono);font-size:11px;font-weight:700}
+.flow-register .flow-detail{grid-column:3;min-width:0}
+.flow-register .flow-detail .valbadge{display:inline-flex;vertical-align:middle}
 .commitment-register li{grid-template-columns:34px minmax(0,1fr);background:#fff}
 .artifact-solutions .editorial-section:not(:last-child) .editorial-copy,
 .artifact-bench .editorial-section,
@@ -406,8 +408,8 @@ main{display:block}
   .editorial-ref .editorial-section:nth-child(even){background:var(--paper-2)}
   .editorial-ref .editorial-section:nth-child(even) .editorial-copy{padding-right:0}
   .flow-register li{grid-template-columns:28px 1fr}
-  .flow-register li>span{display:block}
-  .flow-register li>span>b{display:block;margin-bottom:7px}
+  .flow-register .flow-title{grid-column:2}
+  .flow-register .flow-detail{grid-column:2;margin-top:7px}
   .measure-table{font-size:11px}
   .measure-table th,.measure-table td{padding:10px 7px}
 }

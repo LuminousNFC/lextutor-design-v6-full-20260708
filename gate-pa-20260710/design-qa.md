@@ -23,6 +23,9 @@
 2. P1 — Complétude : les listes imbriquées, les axes numérotés du Bench, les FAQ et le tableau de mesure n’étaient pas récupérés par le parseur historique. Fix : parse des bullets, clés numérotées, paires Q/R, tables et liens. Post-fix : tous ces éléments sont visibles ou repliables.
 3. P2 — Hiérarchie : les pages partageaient initialement un rendu trop uniforme. Fix : registres métier, mesure, flux et engagements distincts ; niveaux secondaires repliés.
 4. P2 — Accessibilité : quelques liens textuels mesuraient 19–22 px de haut. Fix : hauteur interactive minimale de 24 px. Post-fix : 0 petite cible détectée.
+5. P1 — Cohérence de grille : les pages P-A utilisaient un conteneur de 1200 px contre 1120 px sur la homepage. Fix : largeur commune de 1120 px. Post-fix à 1900 px : conteneur `x=390`, logo et contenu `x=418` sur toutes les routes contrôlées.
+6. P1 — Index incomplets : les intitulés étaient tronqués par `text-overflow: ellipsis`. Fix : suppression de l’ellipsis et retour à la ligne naturel. Post-fix : 0 libellé d’index dont `scrollWidth` dépasse `clientWidth`.
+7. P1 — Registre des flux : les badges de statut occupaient une cellule de grille autonome et se repliaient verticalement. Fix : cellules sémantiques distinctes `flow-title` et `flow-detail`, statut intégré au détail. Post-fix : badges à largeur normale, aucune colonne parasite et aucun débordement.
 
 ## Focused comparisons
 
@@ -38,6 +41,8 @@
 - Focus visible : 2 px.
 - Reduced motion : 0 animation active.
 - Débordement horizontal : 0 à 390 px et 1440 px.
+- Intitulés d’index tronqués : 0 sur les 22 vues finales.
+- Alignement desktop : grille commune vérifiée sur homepage, Plateforme, Solutions, Bench, Sécurité et À propos.
 - Console browser : 0 erreur.
 
 ## Findings

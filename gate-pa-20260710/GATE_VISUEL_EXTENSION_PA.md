@@ -1,6 +1,6 @@
 # Gate visuel — extension de la grammaire P-A
 
-Statut : rendu local, non publié.
+Statut : gate de revue séparé ; la référence à la racine n’est pas remplacée.
 
 ## Structure avant / après
 
@@ -39,4 +39,7 @@ Statut : rendu local, non publié.
 - Cibles interactives : 0 cible visible sous 24 px sur les huit vues du gate.
 - Reduced motion : 0 animation active sur les huit vues sous `prefers-reduced-motion: reduce`.
 - Console : 0 erreur sur les huit vues.
-- Publication : non effectuée ; gate visuel en attente de validation.
+- Grille : largeur commune de 1120 px sur la homepage et toutes les pages suivantes.
+- Index : intitulés complets avec retour à la ligne ; aucune ellipse ni troncature desktop.
+- Registre des flux : les statuts restent intégrés à la description de leur couche, sans colonne étroite.
+- Publication : gate de revue uniquement ; remplacement de la référence suspendu jusqu’à validation.
