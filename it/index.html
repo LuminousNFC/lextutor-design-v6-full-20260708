@@ -255,7 +255,7 @@ main{display:block}
 .ledger-more .l-r:last-child{border-bottom:0}
 .vband video{background:var(--paper-2)}
 
-.platform-ref .wrap{max-width:1200px}
+.platform-ref .wrap{max-width:1120px}
 .platform-intro{padding:82px 0 68px;border-bottom:1px solid var(--line)}
 .platform-intro h1{max-width:930px;white-space:normal;font-size:clamp(42px,5.3vw,72px);line-height:1;letter-spacing:-.05em}
 .platform-intro .sub{max-width:760px;margin:24px 0 0;font-size:18px;line-height:1.6}
@@ -310,6 +310,75 @@ main{display:block}
 .platform-faq p{padding:0 0 24px;color:var(--ink-2)}
 .platform-cta{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
 
+/* Extension du langage P-A aux pages éditoriales de la V6. */
+.editorial-ref .platform-intro{min-height:360px;display:flex;align-items:flex-end}
+.editorial-ref .platform-intro .wrap{width:100%}
+.editorial-ref .platform-intro .sub{max-width:780px}
+.editorial-ref .hero-ctas{margin-top:28px;margin-bottom:0}
+.editorial-ref .platform-layout{padding-bottom:72px}
+.editorial-ref .platform-index a{grid-template-columns:30px minmax(0,1fr)}
+.editorial-ref .platform-index a{align-items:start;padding:11px 0;line-height:1.35}
+.editorial-ref .platform-index a span:last-child{overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}
+.editorial-main{border-top:1px solid var(--line)}
+.editorial-section{scroll-margin-top:86px;padding:68px 0;border-bottom:1px solid var(--line)}
+.editorial-section:first-child{border-top:0}
+.editorial-section:last-child{border-bottom:0}
+.editorial-section-grid{display:grid;grid-template-columns:116px minmax(0,1fr);gap:34px;align-items:start}
+.editorial-section-meta{position:sticky;top:94px;display:grid;gap:8px;padding-top:8px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.editorial-section-meta b{color:var(--ana-t);font-size:10px;font-weight:600}
+.editorial-copy{min-width:0;max-width:820px}
+.editorial-copy h2{max-width:780px;margin:0 0 24px;font-size:clamp(30px,3.3vw,46px);line-height:1.04;letter-spacing:-.035em}
+.editorial-copy h2,.editorial-ref .platform-intro h1{overflow-wrap:anywhere;hyphens:auto}
+.editorial-copy p{max-width:760px;margin:0 0 18px;color:var(--ink-2);font-size:16px;line-height:1.67}
+.editorial-copy p:last-child{margin-bottom:0}
+.editorial-copy ol{display:grid;gap:0;max-width:760px;margin:26px 0 0;padding:0;border-top:1px solid var(--line);list-style:none;counter-reset:editorial-list}
+.editorial-copy li{counter-increment:editorial-list;display:grid;grid-template-columns:34px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);color:var(--ink-2);font-size:15px;line-height:1.55}
+.editorial-copy li::before{content:counter(editorial-list,decimal-leading-zero);color:var(--ana-t);font-family:var(--mono);font-size:9px;letter-spacing:.08em}
+.editorial-copy li>span{min-width:0}
+.editorial-copy .val-line{margin-top:20px}
+.editorial-copy .valbadge{vertical-align:middle}
+.editorial-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px!important}
+.editorial-ref .editorial-section:nth-child(even){background:var(--paper-2)}
+.editorial-ref .editorial-section:nth-child(even) .editorial-copy{padding-right:30px}
+.editorial-ref .editorial-note{padding:26px;border:1px solid var(--line);background:var(--paper-2)}
+.editorial-ref .editorial-note p{font-family:var(--serif);font-size:20px;line-height:1.55}
+.editorial-ref .email-link{color:var(--law-t);text-decoration:underline;text-underline-offset:3px}
+.editorial-ref .val-line a,.editorial-ref .email-link{min-height:24px;display:inline-flex;align-items:center}
+.editorial-details{max-width:760px;border-top:1px solid var(--line)}
+.editorial-details:last-of-type{border-bottom:1px solid var(--line)}
+.editorial-details summary{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-weight:650;list-style:none}
+.editorial-details summary::-webkit-details-marker{display:none}
+.editorial-details summary::after{content:"+";font-family:var(--mono);font-size:16px}
+.editorial-details[open] summary::after{content:"−"}
+.editorial-details>div{padding:0 0 22px}
+.editorial-details p{margin:0}
+.registry-signature{margin-top:24px!important;padding:18px 20px;border-left:3px solid var(--ana);background:#fff;font-family:var(--serif);font-size:18px!important}
+.measure-table{width:100%;margin-top:26px;border-collapse:collapse;border:1px solid var(--line);background:#fff;font-size:13px}
+.measure-table th,.measure-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left}
+.measure-table th{color:var(--ink-3);background:var(--paper-2);font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.measure-table td:not(:first-child),.measure-table th:not(:first-child){width:12%;text-align:center;font-family:var(--mono)}
+.flow-register li{grid-template-columns:34px minmax(170px,.65fr) minmax(0,1.35fr)}
+.flow-register .flow-title{grid-column:2;color:var(--ink);font-family:var(--mono);font-size:11px;font-weight:700}
+.flow-register .flow-detail{grid-column:3;min-width:0}
+.flow-register .flow-detail .valbadge{display:inline-flex;vertical-align:middle}
+.commitment-register li{grid-template-columns:34px minmax(0,1fr);background:#fff}
+.artifact-solutions .editorial-section:not(:last-child) .editorial-copy,
+.artifact-bench .editorial-section,
+.artifact-securite .editorial-section,
+.artifact-a-propos .editorial-section{border-color:var(--line)}
+.artifact-methodologie .editorial-section-meta b::after{content:" / dossier"}
+.artifact-tarifs .editorial-section{background:#fff}
+.artifact-tarifs .offer-register{border:1px solid var(--line);background:var(--paper-2)}
+.artifact-tarifs .offer-register li{padding-left:14px;padding-right:14px}
+.artifact-tarifs .secondary-offer{padding:22px 0}
+.artifact-tarifs .secondary-offer .editorial-section-grid{grid-template-columns:1fr}
+.artifact-tarifs .secondary-offer .editorial-section-meta{display:none}
+.artifact-tarifs .offer-annex{border:1px solid var(--line);padding:0 18px;background:var(--paper-2)}
+.artifact-tarifs .offer-annex>div{padding-bottom:18px}
+.artifact-tarifs .offer-annex h2{font-size:26px}
+.artifact-contact .editorial-main{counter-reset:contact-step}
+.artifact-contact .editorial-section{counter-increment:contact-step}
+
 @media(max-width:960px){
   .ledger-more>summary{padding:10px 16px}
   .platform-intro{padding:56px 0 46px}
@@ -328,6 +397,21 @@ main{display:block}
   .authority-link span{margin:0;padding-left:8px}
   .authority-node.analysis{margin-top:0}
   .authority-note,.platform-cta{grid-template-columns:1fr}
+  .editorial-ref .platform-intro{min-height:0}
+  .editorial-ref .platform-layout{padding-bottom:42px}
+  .editorial-ref .platform-index{display:flex;overflow-x:auto;justify-content:flex-start;scrollbar-width:thin}
+  .editorial-ref .platform-index a{flex:0 0 48px;border-right:0}
+  .editorial-ref .platform-index a:last-child{border-right:1px solid var(--line)}
+  .editorial-section{padding:48px 0}
+  .editorial-section-grid{grid-template-columns:1fr;gap:14px}
+  .editorial-section-meta{position:static;display:flex;align-items:center;gap:10px;padding:0}
+  .editorial-ref .editorial-section:nth-child(even){background:var(--paper-2)}
+  .editorial-ref .editorial-section:nth-child(even) .editorial-copy{padding-right:0}
+  .flow-register li{grid-template-columns:28px 1fr}
+  .flow-register .flow-title{grid-column:2}
+  .flow-register .flow-detail{grid-column:2;margin-top:7px}
+  .measure-table{font-size:11px}
+  .measure-table th,.measure-table td{padding:10px 7px}
 }
 </style></head><body class="home-ref"><div id="lxintro" aria-hidden="true"><div class="lxi-box">
 <svg class="lxmark lxi-anim" viewBox="-4 -4 72 72" width="88" height="88" aria-hidden="true">

@@ -235,7 +235,185 @@ main{display:block}
 @keyframes lxp{0%{opacity:.6;transform:scale(.6)}100%{opacity:0;transform:scale(1.7)}}
 @keyframes lxw{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion: reduce){#lxintro{display:none}}
-</style></head><body><div class="progress" aria-hidden="true"></div>
+/* v6 référence — consolidation H-A / P-A validée le 10.07.2026 */
+.home-ref::before,.platform-ref::before{display:none}
+.home-ref .progress,.platform-ref .progress{display:none!important}
+.home-ref .rv,.platform-ref .rv{opacity:1!important;transform:none!important;animation:none!important}
+.home-ref nav,.platform-ref nav{background:var(--paper);backdrop-filter:none}
+.home-ref .lang a,.platform-ref .lang a{min-width:24px;min-height:24px;display:inline-flex;align-items:center;justify-content:center}
+.home-ref .olink{min-height:24px;display:inline-flex;align-items:center}
+.inst{border-radius:4px;box-shadow:none;overflow:hidden}
+.chip{background:transparent;border-radius:3px;padding:5px 8px}
+.corpus{border-radius:2px}
+.inst-fin{justify-content:flex-start}
+.inst-fin b{font-size:12px}
+.ledger-more{border-bottom:1px solid var(--line)}
+.ledger-more>summary{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 22px;cursor:pointer;color:var(--ink-2);font-family:var(--mono);font-size:11px;list-style:none;background:var(--paper-2)}
+.ledger-more>summary::-webkit-details-marker{display:none}
+.ledger-more>summary::after{content:"+";font-size:16px;color:var(--ink)}
+.ledger-more[open]>summary::after{content:"−"}
+.ledger-more .l-r:last-child{border-bottom:0}
+.vband video{background:var(--paper-2)}
+
+.platform-ref .wrap{max-width:1120px}
+.platform-intro{padding:82px 0 68px;border-bottom:1px solid var(--line)}
+.platform-intro h1{max-width:930px;white-space:normal;font-size:clamp(42px,5.3vw,72px);line-height:1;letter-spacing:-.05em}
+.platform-intro .sub{max-width:760px;margin:24px 0 0;font-size:18px;line-height:1.6}
+.platform-layout{display:grid;grid-template-columns:180px minmax(0,1fr);gap:48px;padding-top:72px}
+.platform-index{position:sticky;top:92px;align-self:start;display:grid}
+.platform-index a{display:grid;grid-template-columns:30px 1fr;gap:8px;min-height:44px;align-items:center;border-bottom:1px solid var(--line);color:var(--ink-3);font-family:var(--mono);font-size:10px}
+.platform-index a:hover,.platform-index a:focus-visible{color:var(--ink)}
+.platform-main{min-width:0}
+.platform-layer{scroll-margin-top:86px;padding:72px 0;border-bottom:1px solid var(--line)}
+.platform-layer:first-child{padding-top:0}
+.platform-layer-grid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(230px,.9fr);gap:44px;align-items:start}
+.platform-step{display:block;margin-bottom:13px;color:var(--ana-t);font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+.platform-layer h2,.platform-section h2{font-size:clamp(32px,3.5vw,48px);line-height:1.04}
+.platform-copy{color:var(--ink-2);font-size:17px;line-height:1.65}
+.platform-ref .valbadge{display:inline-flex;align-items:center;min-height:24px;padding:2px 8px;border:1px dashed var(--line-2);border-radius:2px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-decoration:none}
+.platform-status{display:block;margin:14px 0 10px}
+.platform-artifact{border:1px solid var(--line);background:#fff}
+.platform-artifact-title{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.platform-artifact-body{padding:12px}
+.platform-artifact-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:11px}
+.platform-artifact-row:last-child{border-bottom:0}
+.platform-artifact-row b{font-family:var(--mono);font-size:10px;text-align:right}
+.platform-artifact-row .law-text{color:var(--law-t)}
+.platform-artifact-row .case-text{color:var(--case-t)}
+.platform-artifact-row .ana-text{color:var(--ana-t)}
+.platform-section{padding:80px 0;border-bottom:1px solid var(--line)}
+.platform-section.tint{margin-left:0;margin-right:0;padding-left:24px;padding-right:24px;background:var(--paper-2)}
+.authority-map{display:grid;grid-template-columns:minmax(145px,.8fr) 66px minmax(180px,1.15fr) 66px minmax(180px,1fr) 66px minmax(145px,.78fr);align-items:stretch;min-height:320px;margin-top:30px;padding:26px;border:1px solid var(--line);background:var(--paper-2)}
+.authority-col{display:flex;flex-direction:column;gap:9px}
+.authority-col-title{min-height:28px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.authority-node{min-height:56px;display:flex;flex-direction:column;justify-content:center;padding:10px 11px;border:1px solid var(--line);border-left:4px solid var(--ink);background:#fff}
+.authority-node strong{font-family:var(--mono);font-size:10.5px;line-height:1.35}
+.authority-node small{margin-top:3px;color:var(--ink-3);font-size:9.5px}
+.authority-node.law{border-left-color:var(--law)}.authority-node.law strong{color:var(--law-t)}
+.authority-node.case{border-left-color:var(--case)}.authority-node.case strong{color:var(--case-t)}
+.authority-node.analysis{margin-top:28px;border-left-color:var(--ana)}.authority-node.analysis strong{color:var(--ana-t)}
+.authority-link{position:relative;display:flex;align-items:center;justify-content:center;min-width:0}
+.authority-link::before{content:"";position:absolute;left:8px;right:12px;top:51%;height:1px;background:#918b81}
+.authority-link::after{content:"";position:absolute;right:7px;top:calc(51% - 4px);width:7px;height:7px;border-top:1px solid #918b81;border-right:1px solid #918b81;transform:rotate(45deg)}
+.authority-link span{position:relative;z-index:1;margin-top:-40px;padding:3px 5px;color:var(--ink-2);background:var(--paper-2);font-family:var(--mono);font-size:8.5px;text-align:center}
+.authority-note{display:grid;grid-template-columns:1fr auto;gap:20px;padding:13px;border:1px solid var(--line);border-top:0;background:#fff;color:var(--ink-2);font-size:11.5px}
+.authority-note b{font-family:var(--mono);font-size:10px}
+.authority-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;color:var(--ink-3);font-family:var(--mono);font-size:9px}
+.authority-legend i{display:inline-block;width:8px;height:8px;margin-right:5px;background:var(--law)}
+.authority-legend i.case{background:var(--case)}.authority-legend i.analysis{background:var(--ana)}
+.platform-faq{margin-top:28px;border-top:1px solid var(--line)}
+.platform-faq details{border-bottom:1px solid var(--line)}
+.platform-faq summary{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-weight:650;list-style:none}
+.platform-faq summary::-webkit-details-marker{display:none}
+.platform-faq summary::after{content:"+";font-family:var(--mono);font-size:16px}
+.platform-faq details[open] summary::after{content:"−"}
+.platform-faq p{padding:0 0 24px;color:var(--ink-2)}
+.platform-cta{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+
+/* Extension du langage P-A aux pages éditoriales de la V6. */
+.editorial-ref .platform-intro{min-height:360px;display:flex;align-items:flex-end}
+.editorial-ref .platform-intro .wrap{width:100%}
+.editorial-ref .platform-intro .sub{max-width:780px}
+.editorial-ref .hero-ctas{margin-top:28px;margin-bottom:0}
+.editorial-ref .platform-layout{padding-bottom:72px}
+.editorial-ref .platform-index a{grid-template-columns:30px minmax(0,1fr)}
+.editorial-ref .platform-index a{align-items:start;padding:11px 0;line-height:1.35}
+.editorial-ref .platform-index a span:last-child{overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}
+.editorial-main{border-top:1px solid var(--line)}
+.editorial-section{scroll-margin-top:86px;padding:68px 0;border-bottom:1px solid var(--line)}
+.editorial-section:first-child{border-top:0}
+.editorial-section:last-child{border-bottom:0}
+.editorial-section-grid{display:grid;grid-template-columns:116px minmax(0,1fr);gap:34px;align-items:start}
+.editorial-section-meta{position:sticky;top:94px;display:grid;gap:8px;padding-top:8px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.editorial-section-meta b{color:var(--ana-t);font-size:10px;font-weight:600}
+.editorial-copy{min-width:0;max-width:820px}
+.editorial-copy h2{max-width:780px;margin:0 0 24px;font-size:clamp(30px,3.3vw,46px);line-height:1.04;letter-spacing:-.035em}
+.editorial-copy h2,.editorial-ref .platform-intro h1{overflow-wrap:anywhere;hyphens:auto}
+.editorial-copy p{max-width:760px;margin:0 0 18px;color:var(--ink-2);font-size:16px;line-height:1.67}
+.editorial-copy p:last-child{margin-bottom:0}
+.editorial-copy ol{display:grid;gap:0;max-width:760px;margin:26px 0 0;padding:0;border-top:1px solid var(--line);list-style:none;counter-reset:editorial-list}
+.editorial-copy li{counter-increment:editorial-list;display:grid;grid-template-columns:34px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);color:var(--ink-2);font-size:15px;line-height:1.55}
+.editorial-copy li::before{content:counter(editorial-list,decimal-leading-zero);color:var(--ana-t);font-family:var(--mono);font-size:9px;letter-spacing:.08em}
+.editorial-copy li>span{min-width:0}
+.editorial-copy .val-line{margin-top:20px}
+.editorial-copy .valbadge{vertical-align:middle}
+.editorial-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px!important}
+.editorial-ref .editorial-section:nth-child(even){background:var(--paper-2)}
+.editorial-ref .editorial-section:nth-child(even) .editorial-copy{padding-right:30px}
+.editorial-ref .editorial-note{padding:26px;border:1px solid var(--line);background:var(--paper-2)}
+.editorial-ref .editorial-note p{font-family:var(--serif);font-size:20px;line-height:1.55}
+.editorial-ref .email-link{color:var(--law-t);text-decoration:underline;text-underline-offset:3px}
+.editorial-ref .val-line a,.editorial-ref .email-link{min-height:24px;display:inline-flex;align-items:center}
+.editorial-details{max-width:760px;border-top:1px solid var(--line)}
+.editorial-details:last-of-type{border-bottom:1px solid var(--line)}
+.editorial-details summary{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-weight:650;list-style:none}
+.editorial-details summary::-webkit-details-marker{display:none}
+.editorial-details summary::after{content:"+";font-family:var(--mono);font-size:16px}
+.editorial-details[open] summary::after{content:"−"}
+.editorial-details>div{padding:0 0 22px}
+.editorial-details p{margin:0}
+.registry-signature{margin-top:24px!important;padding:18px 20px;border-left:3px solid var(--ana);background:#fff;font-family:var(--serif);font-size:18px!important}
+.measure-table{width:100%;margin-top:26px;border-collapse:collapse;border:1px solid var(--line);background:#fff;font-size:13px}
+.measure-table th,.measure-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left}
+.measure-table th{color:var(--ink-3);background:var(--paper-2);font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.measure-table td:not(:first-child),.measure-table th:not(:first-child){width:12%;text-align:center;font-family:var(--mono)}
+.flow-register li{grid-template-columns:34px minmax(170px,.65fr) minmax(0,1.35fr)}
+.flow-register .flow-title{grid-column:2;color:var(--ink);font-family:var(--mono);font-size:11px;font-weight:700}
+.flow-register .flow-detail{grid-column:3;min-width:0}
+.flow-register .flow-detail .valbadge{display:inline-flex;vertical-align:middle}
+.commitment-register li{grid-template-columns:34px minmax(0,1fr);background:#fff}
+.artifact-solutions .editorial-section:not(:last-child) .editorial-copy,
+.artifact-bench .editorial-section,
+.artifact-securite .editorial-section,
+.artifact-a-propos .editorial-section{border-color:var(--line)}
+.artifact-methodologie .editorial-section-meta b::after{content:" / dossier"}
+.artifact-tarifs .editorial-section{background:#fff}
+.artifact-tarifs .offer-register{border:1px solid var(--line);background:var(--paper-2)}
+.artifact-tarifs .offer-register li{padding-left:14px;padding-right:14px}
+.artifact-tarifs .secondary-offer{padding:22px 0}
+.artifact-tarifs .secondary-offer .editorial-section-grid{grid-template-columns:1fr}
+.artifact-tarifs .secondary-offer .editorial-section-meta{display:none}
+.artifact-tarifs .offer-annex{border:1px solid var(--line);padding:0 18px;background:var(--paper-2)}
+.artifact-tarifs .offer-annex>div{padding-bottom:18px}
+.artifact-tarifs .offer-annex h2{font-size:26px}
+.artifact-contact .editorial-main{counter-reset:contact-step}
+.artifact-contact .editorial-section{counter-increment:contact-step}
+
+@media(max-width:960px){
+  .ledger-more>summary{padding:10px 16px}
+  .platform-intro{padding:56px 0 46px}
+  .platform-layout{grid-template-columns:1fr;padding-top:42px}
+  .platform-index{position:static;grid-template-columns:repeat(5,1fr);gap:0}
+  .platform-index a{display:flex;justify-content:center;border:1px solid var(--line);border-right:0}
+  .platform-index a:last-child{border-right:1px solid var(--line)}
+  .platform-index a span:last-child{display:none}
+  .platform-layer-grid{grid-template-columns:1fr;gap:24px}
+  .platform-layer{padding:48px 0}
+  .platform-section{padding-top:56px;padding-bottom:56px}
+  .platform-section.tint{margin-left:0;margin-right:0;padding-left:0;padding-right:0;background:transparent}
+  .authority-map{grid-template-columns:1fr;min-height:0;padding:18px;gap:16px}
+  .authority-link{min-height:32px;justify-content:flex-start;padding-left:12px;border-left:1px solid #918b81}
+  .authority-link::before,.authority-link::after{display:none}
+  .authority-link span{margin:0;padding-left:8px}
+  .authority-node.analysis{margin-top:0}
+  .authority-note,.platform-cta{grid-template-columns:1fr}
+  .editorial-ref .platform-intro{min-height:0}
+  .editorial-ref .platform-layout{padding-bottom:42px}
+  .editorial-ref .platform-index{display:flex;overflow-x:auto;justify-content:flex-start;scrollbar-width:thin}
+  .editorial-ref .platform-index a{flex:0 0 48px;border-right:0}
+  .editorial-ref .platform-index a:last-child{border-right:1px solid var(--line)}
+  .editorial-section{padding:48px 0}
+  .editorial-section-grid{grid-template-columns:1fr;gap:14px}
+  .editorial-section-meta{position:static;display:flex;align-items:center;gap:10px;padding:0}
+  .editorial-ref .editorial-section:nth-child(even){background:var(--paper-2)}
+  .editorial-ref .editorial-section:nth-child(even) .editorial-copy{padding-right:0}
+  .flow-register li{grid-template-columns:28px 1fr}
+  .flow-register .flow-title{grid-column:2}
+  .flow-register .flow-detail{grid-column:2;margin-top:7px}
+  .measure-table{font-size:11px}
+  .measure-table th,.measure-table td{padding:10px 7px}
+}
+</style></head><body class="platform-ref editorial-ref artifact-solutions"><div class="progress" aria-hidden="true"></div>
 <nav aria-label="Navigation"><div class="wrap">
   <a class="wordmark" href="index.html"><svg class="lxmark " viewBox="-4 -4 72 72" width="22" height="22" aria-hidden="true">
 <path class="c c1" style="--dx:-7px;--dy:-7px" d="M0 0 h20 v4 h-16 v16 h-4 z" fill="currentColor"/>
@@ -248,7 +426,11 @@ main{display:block}
   <span class="lang"><a href="../fr/solutions.html" hreflang="fr">FR</a> · <a href="../de/solutions.html" hreflang="de">DE</a> · <a class="on" href="../it/solutions.html" hreflang="it">IT</a> · <a href="../en/solutions.html" hreflang="en">EN</a></span>
   <a class="btn btn-p" href="contact.html" style="margin-left:16px">Richiedere una demo</a>
   <details class="mnav"><summary aria-label="Menu">☰</summary><div class="panel"><a href="plateforme.html">Piattaforma</a><a href="solutions.html">Soluzioni</a><a href="bench.html">Bench</a><a href="securite.html">Sicurezza</a><a href="tarifs.html">Prezzi</a><a href="methodologie.html">Metodologia</a><a href="a-propos.html">Chi siamo</a><a href="contact.html">Contatto</a><div class="mlang"><a href="../fr/solutions.html" hreflang="fr">FR</a> · <a href="../de/solutions.html" hreflang="de">DE</a> · <a class="on" href="../it/solutions.html" hreflang="it">IT</a> · <a href="../en/solutions.html" hreflang="en">EN</a></div></div></details>
-</div></nav><main class="gen"><section><div class="wrap"><span class="kicker rv">Soluzioni</span><h2>Quattro professioni. Una stessa esigenza di prova.</h2><p class="rv">Soluzioni per professione</p><p class="rv">Studi legali` · `Ministeri pubblici` · `Servizi giuridici aziendali` · `Amministrazioni cantonali</p><h2 class="sec-h2 rv">Studi legali</h2><p class="rv">studi-legali</p><p class="rv">Ogni affermazione. La sua fonte.</p><p class="rv">La ricerca assorbe ore che nessuno fattura, e il rischio resta intero: una citazione approssimativa si ritorce contro di voi in udienza. Verificare ogni riferimento a mano, atto dopo atto, non è più sostenibile.</p><p class="rv">Caso d’uso tipico</p><p class="rv">Un cliente appaltatore eccepisce la tardività dell’avviso dei difetti che il committente gli oppone. L’avvocato descrive i fatti; LexTutor risale agli art. 367 e 368 CO — verifica dell’opera, avviso dei difetti, diritti del committente — e presenta la giurisprudenza federale pertinente, gerarchizzata per autorità. L’avvocato controlla ogni fonte su Fedlex e sul sito del Tribunale federale prima di prendere posizione.</p><p class="rv">La prova LexTutor</p><p class="rv">Il Source Ledger accompagna ogni analisi: articolo esatto, sentenza esatta, rango normativo, stato di vigenza, link ufficiale. Il grafo di autorità mostra come le fonti si citano tra loro — comprese le disposizioni connesse che una ricerca per parole chiave non fa emergere.</p><p class="rv">Ciò che la controparte verificherà, voi l’avete già verificato.</p><h2 class="sec-h2 rv">Ministeri pubblici</h2><p class="rv">ministeri-pubblici</p><p class="rv">Ogni affermazione. La sua fonte.</p><p class="rv">Incarti voluminosi, provvedimenti coercitivi da motivare entro termini stretti, atti che circolano tra francese, tedesco e italiano. Una base legale citata a memoria non basta: la difesa controllerà ogni riferimento.</p><p class="rv">Caso d’uso tipico</p><p class="rv">Un procuratore pubblico prepara una richiesta di misure di sorveglianza. Verifica le condizioni dell’art. 269 CPP e i reati del catalogo, poi la giurisprudenza del Tribunale federale sulla proporzionalità. Per la dimensione internazionale dell’incarto passa al quadro dell’AIMP — senza cambiare strumento, nella lingua del procedimento.</p><p class="rv">La prova LexTutor</p><p class="rv">Un canone unico per ogni legge, interrogabile in francese, tedesco e italiano: StPO in tedesco, CPP in francese e in italiano designano lo stesso testo, gli stessi articoli, gli stessi link ufficiali. Il grafo collega Codice penale, procedura e giurisprudenza; il Source Ledger documenta lo stato di vigenza di ogni disposizione citata.</p><h2 class="sec-h2 rv">Servizi giuridici aziendali</h2><p class="rv">servizi-giuridici</p><p class="rv">Ogni affermazione. La sua fonte.</p><p class="rv">Le domande arrivano da tutta l’azienda, urgenti ed eterogenee: un licenziamento contestato, una clausola sui dati, una controversia con un fornitore. Occorre rispondere rapidamente, senza poter esternalizzare tutto — e assumersi ogni presa di posizione.</p><p class="rv">Caso d’uso tipico</p><p class="rv">Le risorse umane chiedono se un licenziamento immediato è difendibile. Il giurista interno verifica le cause gravi dell’art. 337 CO e la giurisprudenza federale che ne traccia i contorni, poi trasmette una posizione scritta, fonti alla mano — o decide di coinvolgere lo studio legale esterno, con un incarto già costituito.</p><p class="rv">La prova LexTutor</p><p class="rv">Il Source Ledger trasforma un parere interno in una posizione documentata: ogni affermazione porta il suo riferimento, controllabile con un clic sulla fonte ufficiale. Per i gruppi attivi in più regioni linguistiche, la stessa questione si tratta in francese, tedesco o italiano, sullo stesso canone di leggi.</p><h2 class="sec-h2 rv">Amministrazioni cantonali</h2><p class="rv">amministrazioni</p><p class="rv">Ogni affermazione. La sua fonte.</p><p class="rv">Il diritto cantonale vive nella propria raccolta, articolato con il diritto federale superiore, e gli strumenti generici lo ignorano. Ogni decisione deve citare la propria base legale esatta — ogni approssimazione apre la via al ricorso.</p><p class="rv">Caso d’uso tipico</p><p class="rv">Un giurista di un servizio cantonale istruisce una decisione impugnabile. Parte dalla legge cantonale applicabile, ne verifica le ordinanze di esecuzione, controlla l’articolazione con il diritto federale superiore e identifica le disposizioni di procedura che la decisione deve trattare. Il tutto citato, datato, verificabile.</p><p class="rv">La prova LexTutor</p><p class="rv">LexTutor copre il diritto federale e il diritto cantonale in un unico grafo: <a class="valbadge" href="contact.html" title="Dato condiviso in dimostrazione privata — contattarci">SU APPUNTAMENTO</a>. Il Source Ledger distingue il rango normativo di ogni fonte — costituzione, legge, ordinanza, federale o cantonale — e ne segnala lo stato di vigenza.</p><p class="rv">Quattro professioni, una disciplina: la generazione interviene solo dopo la raccolta, la governance e la verifica delle fonti. Il metodo è descritto nella pagina Piattaforma; i risultati sono misurati dallo Swiss Legal Bench. <a class="valbadge" href="contact.html" title="Dato condiviso in dimostrazione privata — contattarci">SU APPUNTAMENTO</a></p><h2 class="sec-h2 rv">La vostra professione, le vostre fonti, le vostre lingue di lavoro.</h2><p class="rv">Vedete LexTutor all’opera su un caso vicino al vostro — federale o cantonale, in francese, tedesco o italiano.</p><p class="rv">Richiedere una demo</p><p class="rv">Provare su un caso pubblico</p><p class="rv val-line"><a href="contact.html">Dettagli condivisi su appuntamento →</a></p></div></section></main><footer><div class="wrap">
+</div></nav>
+<main class="platform-ref editorial-ref artifact-solutions">
+  <header class="platform-intro"><div class="wrap"><span class="eyebrow">Soluzioni per professione</span><h1>Quattro professioni. Una stessa esigenza di prova.</h1><p class="sub">Avvocati, procuratori pubblici, giuristi d’impresa, servizi dello Stato: il lavoro è diverso, il vincolo è lo stesso. Ogni presa di posizione deve poggiare sull’articolo esatto, sulla sentenza esatta, sulla versione in vigore. LexTutor è costruito per questo vincolo.</p></div></header>
+  <div class="wrap platform-layout"><nav class="platform-index editorial-index" aria-label="Soluzioni"><a href="#section-01"><span>01</span><span>Studi legali</span></a><a href="#section-02"><span>02</span><span>Ministeri pubblici</span></a><a href="#section-03"><span>03</span><span>Servizi giuridici aziendali</span></a><a href="#section-04"><span>04</span><span>Amministrazioni cantonali</span></a><a href="#section-07"><span>07</span><span>La vostra professione, le vostre fonti, le vostre lingue di lavoro.</span></a></nav><div class="platform-main editorial-main"><section id="section-01" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>01</b><span>Studi legali</span></div><div class="editorial-copy"><h2>Studi legali</h2><p class="rv">studi-legali</p><p class="rv">Ogni affermazione. La sua fonte.</p><details class="editorial-details"><summary>La ricerca assorbe ore che nessuno fattura, e il rischio resta intero: una citazione approssimativa si ritorce contro di voi in udienza. Verificare ogni riferimento a mano, atto dopo atto, non è più sostenibile.</summary><div><p class="rv">Caso d’uso tipico</p></div></details><details class="editorial-details"><summary>Un cliente appaltatore eccepisce la tardività dell’avviso dei difetti che il committente gli oppone. L’avvocato descrive i fatti; LexTutor risale agli art. 367 e 368 CO — verifica dell’opera, avviso dei difetti, diritti del committente — e presenta la giurisprudenza federale pertinente, gerarchizzata per autorità. L’avvocato controlla ogni fonte su Fedlex e sul sito del Tribunale federale prima di prendere posizione.</summary><div><p class="rv">La prova LexTutor</p></div></details><p class="rv registry-signature">Il Source Ledger accompagna ogni analisi: articolo esatto, sentenza esatta, rango normativo, stato di vigenza, link ufficiale. Il grafo di autorità mostra come le fonti si citano tra loro — comprese le disposizioni connesse che una ricerca per parole chiave non fa emergere.</p><p class="rv registry-signature">Ciò che la controparte verificherà, voi l’avete già verificato.</p></div></div></section><section id="section-02" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>02</b><span>Ministeri pubblici</span></div><div class="editorial-copy"><h2>Ministeri pubblici</h2><p class="rv">ministeri-pubblici</p><p class="rv">Ogni affermazione. La sua fonte.</p><details class="editorial-details"><summary>Incarti voluminosi, provvedimenti coercitivi da motivare entro termini stretti, atti che circolano tra francese, tedesco e italiano. Una base legale citata a memoria non basta: la difesa controllerà ogni riferimento.</summary><div><p class="rv">Caso d’uso tipico</p></div></details><details class="editorial-details"><summary>Un procuratore pubblico prepara una richiesta di misure di sorveglianza. Verifica le condizioni dell’art. 269 CPP e i reati del catalogo, poi la giurisprudenza del Tribunale federale sulla proporzionalità. Per la dimensione internazionale dell’incarto passa al quadro dell’AIMP — senza cambiare strumento, nella lingua del procedimento.</summary><div><p class="rv">La prova LexTutor</p></div></details><p class="rv registry-signature">Un canone unico per ogni legge, interrogabile in francese, tedesco e italiano: StPO in tedesco, CPP in francese e in italiano designano lo stesso testo, gli stessi articoli, gli stessi link ufficiali. Il grafo collega Codice penale, procedura e giurisprudenza; il Source Ledger documenta lo stato di vigenza di ogni disposizione citata.</p></div></div></section><section id="section-03" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>03</b><span>Servizi giuridici aziendali</span></div><div class="editorial-copy"><h2>Servizi giuridici aziendali</h2><p class="rv">servizi-giuridici</p><p class="rv">Ogni affermazione. La sua fonte.</p><details class="editorial-details"><summary>Le domande arrivano da tutta l’azienda, urgenti ed eterogenee: un licenziamento contestato, una clausola sui dati, una controversia con un fornitore. Occorre rispondere rapidamente, senza poter esternalizzare tutto — e assumersi ogni presa di posizione.</summary><div><p class="rv">Caso d’uso tipico</p></div></details><details class="editorial-details"><summary>Le risorse umane chiedono se un licenziamento immediato è difendibile. Il giurista interno verifica le cause gravi dell’art. 337 CO e la giurisprudenza federale che ne traccia i contorni, poi trasmette una posizione scritta, fonti alla mano — o decide di coinvolgere lo studio legale esterno, con un incarto già costituito.</summary><div><p class="rv">La prova LexTutor</p></div></details><p class="rv registry-signature">Il Source Ledger trasforma un parere interno in una posizione documentata: ogni affermazione porta il suo riferimento, controllabile con un clic sulla fonte ufficiale. Per i gruppi attivi in più regioni linguistiche, la stessa questione si tratta in francese, tedesco o italiano, sullo stesso canone di leggi.</p></div></div></section><section id="section-04" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>04</b><span>Amministrazioni cantonali</span></div><div class="editorial-copy"><h2>Amministrazioni cantonali</h2><p class="rv">amministrazioni</p><p class="rv">Ogni affermazione. La sua fonte.</p><details class="editorial-details"><summary>Il diritto cantonale vive nella propria raccolta, articolato con il diritto federale superiore, e gli strumenti generici lo ignorano. Ogni decisione deve citare la propria base legale esatta — ogni approssimazione apre la via al ricorso.</summary><div><p class="rv">Caso d’uso tipico</p></div></details><details class="editorial-details"><summary>Un giurista di un servizio cantonale istruisce una decisione impugnabile. Parte dalla legge cantonale applicabile, ne verifica le ordinanze di esecuzione, controlla l’articolazione con il diritto federale superiore e identifica le disposizioni di procedura che la decisione deve trattare. Il tutto citato, datato, verificabile.</summary><div><p class="rv">La prova LexTutor</p></div></details><p class="rv registry-signature">LexTutor copre il diritto federale e il diritto cantonale in un unico grafo: <a class="valbadge" href="contact.html" title="Dato condiviso in dimostrazione privata — contattarci">SU APPUNTAMENTO</a>. Il Source Ledger distingue il rango normativo di ogni fonte — costituzione, legge, ordinanza, federale o cantonale — e ne segnala lo stato di vigenza.</p></div></div></section><section id="section-05" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>05</b><span>Soluzioni</span></div><div class="editorial-copy editorial-note"><p class="rv">Quattro professioni, una disciplina: la generazione interviene solo dopo la raccolta, la governance e la verifica delle fonti. Il metodo è descritto nella pagina Piattaforma; i risultati sono misurati dallo Swiss Legal Bench. <a class="valbadge" href="contact.html" title="Dato condiviso in dimostrazione privata — contattarci">SU APPUNTAMENTO</a></p></div></div></section><section id="section-06" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>06</b><span>Soluzioni</span></div><div class="editorial-copy editorial-note"><p class="rv val-line"><a href="contact.html">Dettagli condivisi su appuntamento →</a></p></div></div></section><section id="section-07" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>07</b><span>La vostra professione, le vostre fonti, le vostre lingue di lavoro.</span></div><div class="editorial-copy"><h2>La vostra professione, le vostre fonti, le vostre lingue di lavoro.</h2><p class="rv">Vedete LexTutor all’opera su un caso vicino al vostro — federale o cantonale, in francese, tedesco o italiano.</p><p class="editorial-actions"><a class="btn btn-p" href="contact.html">Richiedere una demo</a></p><p class="editorial-actions"><a class="btn btn-s" href="contact.html">Provare su un caso pubblico</a></p><p class="rv val-line"><a href="contact.html">Dettagli condivisi su appuntamento →</a></p></div></div></section></div></div>
+</main><footer><div class="wrap">
   <div class="cols">
     <div><div class="f-mark">LexTutor</div><p style="margin-top:13px;font-size:13.5px;max-width:34ch">Il diritto svizzero, prove alla mano. Pipeline di verifica proprietaria · Ospitato in Svizzera.</p></div>
     <div><h4>Prodotto</h4><a href="plateforme.html">Piattaforma</a><a href="solutions.html">Soluzioni</a><a href="securite.html">Sicurezza</a></div>

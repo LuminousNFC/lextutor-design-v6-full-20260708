@@ -235,7 +235,185 @@ main{display:block}
 @keyframes lxp{0%{opacity:.6;transform:scale(.6)}100%{opacity:0;transform:scale(1.7)}}
 @keyframes lxw{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion: reduce){#lxintro{display:none}}
-</style></head><body><div class="progress" aria-hidden="true"></div>
+/* v6 référence — consolidation H-A / P-A validée le 10.07.2026 */
+.home-ref::before,.platform-ref::before{display:none}
+.home-ref .progress,.platform-ref .progress{display:none!important}
+.home-ref .rv,.platform-ref .rv{opacity:1!important;transform:none!important;animation:none!important}
+.home-ref nav,.platform-ref nav{background:var(--paper);backdrop-filter:none}
+.home-ref .lang a,.platform-ref .lang a{min-width:24px;min-height:24px;display:inline-flex;align-items:center;justify-content:center}
+.home-ref .olink{min-height:24px;display:inline-flex;align-items:center}
+.inst{border-radius:4px;box-shadow:none;overflow:hidden}
+.chip{background:transparent;border-radius:3px;padding:5px 8px}
+.corpus{border-radius:2px}
+.inst-fin{justify-content:flex-start}
+.inst-fin b{font-size:12px}
+.ledger-more{border-bottom:1px solid var(--line)}
+.ledger-more>summary{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 22px;cursor:pointer;color:var(--ink-2);font-family:var(--mono);font-size:11px;list-style:none;background:var(--paper-2)}
+.ledger-more>summary::-webkit-details-marker{display:none}
+.ledger-more>summary::after{content:"+";font-size:16px;color:var(--ink)}
+.ledger-more[open]>summary::after{content:"−"}
+.ledger-more .l-r:last-child{border-bottom:0}
+.vband video{background:var(--paper-2)}
+
+.platform-ref .wrap{max-width:1120px}
+.platform-intro{padding:82px 0 68px;border-bottom:1px solid var(--line)}
+.platform-intro h1{max-width:930px;white-space:normal;font-size:clamp(42px,5.3vw,72px);line-height:1;letter-spacing:-.05em}
+.platform-intro .sub{max-width:760px;margin:24px 0 0;font-size:18px;line-height:1.6}
+.platform-layout{display:grid;grid-template-columns:180px minmax(0,1fr);gap:48px;padding-top:72px}
+.platform-index{position:sticky;top:92px;align-self:start;display:grid}
+.platform-index a{display:grid;grid-template-columns:30px 1fr;gap:8px;min-height:44px;align-items:center;border-bottom:1px solid var(--line);color:var(--ink-3);font-family:var(--mono);font-size:10px}
+.platform-index a:hover,.platform-index a:focus-visible{color:var(--ink)}
+.platform-main{min-width:0}
+.platform-layer{scroll-margin-top:86px;padding:72px 0;border-bottom:1px solid var(--line)}
+.platform-layer:first-child{padding-top:0}
+.platform-layer-grid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(230px,.9fr);gap:44px;align-items:start}
+.platform-step{display:block;margin-bottom:13px;color:var(--ana-t);font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+.platform-layer h2,.platform-section h2{font-size:clamp(32px,3.5vw,48px);line-height:1.04}
+.platform-copy{color:var(--ink-2);font-size:17px;line-height:1.65}
+.platform-ref .valbadge{display:inline-flex;align-items:center;min-height:24px;padding:2px 8px;border:1px dashed var(--line-2);border-radius:2px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-decoration:none}
+.platform-status{display:block;margin:14px 0 10px}
+.platform-artifact{border:1px solid var(--line);background:#fff}
+.platform-artifact-title{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.platform-artifact-body{padding:12px}
+.platform-artifact-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:11px}
+.platform-artifact-row:last-child{border-bottom:0}
+.platform-artifact-row b{font-family:var(--mono);font-size:10px;text-align:right}
+.platform-artifact-row .law-text{color:var(--law-t)}
+.platform-artifact-row .case-text{color:var(--case-t)}
+.platform-artifact-row .ana-text{color:var(--ana-t)}
+.platform-section{padding:80px 0;border-bottom:1px solid var(--line)}
+.platform-section.tint{margin-left:0;margin-right:0;padding-left:24px;padding-right:24px;background:var(--paper-2)}
+.authority-map{display:grid;grid-template-columns:minmax(145px,.8fr) 66px minmax(180px,1.15fr) 66px minmax(180px,1fr) 66px minmax(145px,.78fr);align-items:stretch;min-height:320px;margin-top:30px;padding:26px;border:1px solid var(--line);background:var(--paper-2)}
+.authority-col{display:flex;flex-direction:column;gap:9px}
+.authority-col-title{min-height:28px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.authority-node{min-height:56px;display:flex;flex-direction:column;justify-content:center;padding:10px 11px;border:1px solid var(--line);border-left:4px solid var(--ink);background:#fff}
+.authority-node strong{font-family:var(--mono);font-size:10.5px;line-height:1.35}
+.authority-node small{margin-top:3px;color:var(--ink-3);font-size:9.5px}
+.authority-node.law{border-left-color:var(--law)}.authority-node.law strong{color:var(--law-t)}
+.authority-node.case{border-left-color:var(--case)}.authority-node.case strong{color:var(--case-t)}
+.authority-node.analysis{margin-top:28px;border-left-color:var(--ana)}.authority-node.analysis strong{color:var(--ana-t)}
+.authority-link{position:relative;display:flex;align-items:center;justify-content:center;min-width:0}
+.authority-link::before{content:"";position:absolute;left:8px;right:12px;top:51%;height:1px;background:#918b81}
+.authority-link::after{content:"";position:absolute;right:7px;top:calc(51% - 4px);width:7px;height:7px;border-top:1px solid #918b81;border-right:1px solid #918b81;transform:rotate(45deg)}
+.authority-link span{position:relative;z-index:1;margin-top:-40px;padding:3px 5px;color:var(--ink-2);background:var(--paper-2);font-family:var(--mono);font-size:8.5px;text-align:center}
+.authority-note{display:grid;grid-template-columns:1fr auto;gap:20px;padding:13px;border:1px solid var(--line);border-top:0;background:#fff;color:var(--ink-2);font-size:11.5px}
+.authority-note b{font-family:var(--mono);font-size:10px}
+.authority-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;color:var(--ink-3);font-family:var(--mono);font-size:9px}
+.authority-legend i{display:inline-block;width:8px;height:8px;margin-right:5px;background:var(--law)}
+.authority-legend i.case{background:var(--case)}.authority-legend i.analysis{background:var(--ana)}
+.platform-faq{margin-top:28px;border-top:1px solid var(--line)}
+.platform-faq details{border-bottom:1px solid var(--line)}
+.platform-faq summary{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-weight:650;list-style:none}
+.platform-faq summary::-webkit-details-marker{display:none}
+.platform-faq summary::after{content:"+";font-family:var(--mono);font-size:16px}
+.platform-faq details[open] summary::after{content:"−"}
+.platform-faq p{padding:0 0 24px;color:var(--ink-2)}
+.platform-cta{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+
+/* Extension du langage P-A aux pages éditoriales de la V6. */
+.editorial-ref .platform-intro{min-height:360px;display:flex;align-items:flex-end}
+.editorial-ref .platform-intro .wrap{width:100%}
+.editorial-ref .platform-intro .sub{max-width:780px}
+.editorial-ref .hero-ctas{margin-top:28px;margin-bottom:0}
+.editorial-ref .platform-layout{padding-bottom:72px}
+.editorial-ref .platform-index a{grid-template-columns:30px minmax(0,1fr)}
+.editorial-ref .platform-index a{align-items:start;padding:11px 0;line-height:1.35}
+.editorial-ref .platform-index a span:last-child{overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}
+.editorial-main{border-top:1px solid var(--line)}
+.editorial-section{scroll-margin-top:86px;padding:68px 0;border-bottom:1px solid var(--line)}
+.editorial-section:first-child{border-top:0}
+.editorial-section:last-child{border-bottom:0}
+.editorial-section-grid{display:grid;grid-template-columns:116px minmax(0,1fr);gap:34px;align-items:start}
+.editorial-section-meta{position:sticky;top:94px;display:grid;gap:8px;padding-top:8px;color:var(--ink-3);font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase}
+.editorial-section-meta b{color:var(--ana-t);font-size:10px;font-weight:600}
+.editorial-copy{min-width:0;max-width:820px}
+.editorial-copy h2{max-width:780px;margin:0 0 24px;font-size:clamp(30px,3.3vw,46px);line-height:1.04;letter-spacing:-.035em}
+.editorial-copy h2,.editorial-ref .platform-intro h1{overflow-wrap:anywhere;hyphens:auto}
+.editorial-copy p{max-width:760px;margin:0 0 18px;color:var(--ink-2);font-size:16px;line-height:1.67}
+.editorial-copy p:last-child{margin-bottom:0}
+.editorial-copy ol{display:grid;gap:0;max-width:760px;margin:26px 0 0;padding:0;border-top:1px solid var(--line);list-style:none;counter-reset:editorial-list}
+.editorial-copy li{counter-increment:editorial-list;display:grid;grid-template-columns:34px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);color:var(--ink-2);font-size:15px;line-height:1.55}
+.editorial-copy li::before{content:counter(editorial-list,decimal-leading-zero);color:var(--ana-t);font-family:var(--mono);font-size:9px;letter-spacing:.08em}
+.editorial-copy li>span{min-width:0}
+.editorial-copy .val-line{margin-top:20px}
+.editorial-copy .valbadge{vertical-align:middle}
+.editorial-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px!important}
+.editorial-ref .editorial-section:nth-child(even){background:var(--paper-2)}
+.editorial-ref .editorial-section:nth-child(even) .editorial-copy{padding-right:30px}
+.editorial-ref .editorial-note{padding:26px;border:1px solid var(--line);background:var(--paper-2)}
+.editorial-ref .editorial-note p{font-family:var(--serif);font-size:20px;line-height:1.55}
+.editorial-ref .email-link{color:var(--law-t);text-decoration:underline;text-underline-offset:3px}
+.editorial-ref .val-line a,.editorial-ref .email-link{min-height:24px;display:inline-flex;align-items:center}
+.editorial-details{max-width:760px;border-top:1px solid var(--line)}
+.editorial-details:last-of-type{border-bottom:1px solid var(--line)}
+.editorial-details summary{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-weight:650;list-style:none}
+.editorial-details summary::-webkit-details-marker{display:none}
+.editorial-details summary::after{content:"+";font-family:var(--mono);font-size:16px}
+.editorial-details[open] summary::after{content:"−"}
+.editorial-details>div{padding:0 0 22px}
+.editorial-details p{margin:0}
+.registry-signature{margin-top:24px!important;padding:18px 20px;border-left:3px solid var(--ana);background:#fff;font-family:var(--serif);font-size:18px!important}
+.measure-table{width:100%;margin-top:26px;border-collapse:collapse;border:1px solid var(--line);background:#fff;font-size:13px}
+.measure-table th,.measure-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left}
+.measure-table th{color:var(--ink-3);background:var(--paper-2);font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.measure-table td:not(:first-child),.measure-table th:not(:first-child){width:12%;text-align:center;font-family:var(--mono)}
+.flow-register li{grid-template-columns:34px minmax(170px,.65fr) minmax(0,1.35fr)}
+.flow-register .flow-title{grid-column:2;color:var(--ink);font-family:var(--mono);font-size:11px;font-weight:700}
+.flow-register .flow-detail{grid-column:3;min-width:0}
+.flow-register .flow-detail .valbadge{display:inline-flex;vertical-align:middle}
+.commitment-register li{grid-template-columns:34px minmax(0,1fr);background:#fff}
+.artifact-solutions .editorial-section:not(:last-child) .editorial-copy,
+.artifact-bench .editorial-section,
+.artifact-securite .editorial-section,
+.artifact-a-propos .editorial-section{border-color:var(--line)}
+.artifact-methodologie .editorial-section-meta b::after{content:" / dossier"}
+.artifact-tarifs .editorial-section{background:#fff}
+.artifact-tarifs .offer-register{border:1px solid var(--line);background:var(--paper-2)}
+.artifact-tarifs .offer-register li{padding-left:14px;padding-right:14px}
+.artifact-tarifs .secondary-offer{padding:22px 0}
+.artifact-tarifs .secondary-offer .editorial-section-grid{grid-template-columns:1fr}
+.artifact-tarifs .secondary-offer .editorial-section-meta{display:none}
+.artifact-tarifs .offer-annex{border:1px solid var(--line);padding:0 18px;background:var(--paper-2)}
+.artifact-tarifs .offer-annex>div{padding-bottom:18px}
+.artifact-tarifs .offer-annex h2{font-size:26px}
+.artifact-contact .editorial-main{counter-reset:contact-step}
+.artifact-contact .editorial-section{counter-increment:contact-step}
+
+@media(max-width:960px){
+  .ledger-more>summary{padding:10px 16px}
+  .platform-intro{padding:56px 0 46px}
+  .platform-layout{grid-template-columns:1fr;padding-top:42px}
+  .platform-index{position:static;grid-template-columns:repeat(5,1fr);gap:0}
+  .platform-index a{display:flex;justify-content:center;border:1px solid var(--line);border-right:0}
+  .platform-index a:last-child{border-right:1px solid var(--line)}
+  .platform-index a span:last-child{display:none}
+  .platform-layer-grid{grid-template-columns:1fr;gap:24px}
+  .platform-layer{padding:48px 0}
+  .platform-section{padding-top:56px;padding-bottom:56px}
+  .platform-section.tint{margin-left:0;margin-right:0;padding-left:0;padding-right:0;background:transparent}
+  .authority-map{grid-template-columns:1fr;min-height:0;padding:18px;gap:16px}
+  .authority-link{min-height:32px;justify-content:flex-start;padding-left:12px;border-left:1px solid #918b81}
+  .authority-link::before,.authority-link::after{display:none}
+  .authority-link span{margin:0;padding-left:8px}
+  .authority-node.analysis{margin-top:0}
+  .authority-note,.platform-cta{grid-template-columns:1fr}
+  .editorial-ref .platform-intro{min-height:0}
+  .editorial-ref .platform-layout{padding-bottom:42px}
+  .editorial-ref .platform-index{display:flex;overflow-x:auto;justify-content:flex-start;scrollbar-width:thin}
+  .editorial-ref .platform-index a{flex:0 0 48px;border-right:0}
+  .editorial-ref .platform-index a:last-child{border-right:1px solid var(--line)}
+  .editorial-section{padding:48px 0}
+  .editorial-section-grid{grid-template-columns:1fr;gap:14px}
+  .editorial-section-meta{position:static;display:flex;align-items:center;gap:10px;padding:0}
+  .editorial-ref .editorial-section:nth-child(even){background:var(--paper-2)}
+  .editorial-ref .editorial-section:nth-child(even) .editorial-copy{padding-right:0}
+  .flow-register li{grid-template-columns:28px 1fr}
+  .flow-register .flow-title{grid-column:2}
+  .flow-register .flow-detail{grid-column:2;margin-top:7px}
+  .measure-table{font-size:11px}
+  .measure-table th,.measure-table td{padding:10px 7px}
+}
+</style></head><body class="platform-ref editorial-ref artifact-contact"><div class="progress" aria-hidden="true"></div>
 <nav aria-label="Navigation"><div class="wrap">
   <a class="wordmark" href="index.html"><svg class="lxmark " viewBox="-4 -4 72 72" width="22" height="22" aria-hidden="true">
 <path class="c c1" style="--dx:-7px;--dy:-7px" d="M0 0 h20 v4 h-16 v16 h-4 z" fill="currentColor"/>
@@ -248,7 +426,11 @@ main{display:block}
   <span class="lang"><a href="../fr/contact.html" hreflang="fr">FR</a> · <a href="../de/contact.html" hreflang="de">DE</a> · <a class="on" href="../it/contact.html" hreflang="it">IT</a> · <a href="../en/contact.html" hreflang="en">EN</a></span>
   <a class="btn btn-p" href="contact.html" style="margin-left:16px">Richiedere una demo</a>
   <details class="mnav"><summary aria-label="Menu">☰</summary><div class="panel"><a href="plateforme.html">Piattaforma</a><a href="solutions.html">Soluzioni</a><a href="bench.html">Bench</a><a href="securite.html">Sicurezza</a><a href="tarifs.html">Prezzi</a><a href="methodologie.html">Metodologia</a><a href="a-propos.html">Chi siamo</a><a href="contact.html">Contatto</a><div class="mlang"><a href="../fr/contact.html" hreflang="fr">FR</a> · <a href="../de/contact.html" hreflang="de">DE</a> · <a class="on" href="../it/contact.html" hreflang="it">IT</a> · <a href="../en/contact.html" hreflang="en">EN</a></div></div></details>
-</div></nav><main class="gen"><section><div class="wrap"><span class="kicker rv">Contatto</span><h2>Parliamo della vostra pratica.</h2><p class="rv">Una dimostrazione si prepara: indicateci il vostro settore, il vostro cantone e le vostre lingue di lavoro — adattiamo il caso presentato.</p><h2 class="sec-h2 rv">Scriveteci</h2><p class="rv">Risposta entro due giorni lavorativi. Vi preghiamo di non trasmettere per email alcun dato di dossier di clienti.</p><h2 class="sec-h2 rv">Richiedere una dimostrazione</h2><p class="rv">Indicate nel vostro messaggio: settore di pratica, cantone, lingue di lavoro e la fascia oraria che vi conviene.</p><h2 class="sec-h2 rv">Stampa &amp; partenariati</h2><p class="rv">Stesso indirizzo, precisando l’oggetto. Dossier di presentazione su richiesta.</p></div></section></main><footer><div class="wrap">
+</div></nav>
+<main class="platform-ref editorial-ref artifact-contact">
+  <header class="platform-intro"><div class="wrap"><span class="eyebrow">Contatto</span><h1>Parliamo della vostra pratica.</h1><p class="sub">Una dimostrazione si prepara: indicateci il vostro settore, il vostro cantone e le vostre lingue di lavoro — adattiamo il caso presentato.</p></div></header>
+  <div class="wrap platform-layout"><nav class="platform-index editorial-index" aria-label="Contatto"><a href="#section-01"><span>01</span><span>Scriveteci</span></a><a href="#section-02"><span>02</span><span>Richiedere una dimostrazione</span></a><a href="#section-03"><span>03</span><span>Stampa &amp;amp; partenariati</span></a></nav><div class="platform-main editorial-main"><section id="section-01" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>01</b><span>Scriveteci</span></div><div class="editorial-copy"><h2>Scriveteci</h2><p class="rv"><a class="email-link" href="mailto:feedback@lextutor.ai">feedback@lextutor.ai</a></p><p class="rv">Risposta entro due giorni lavorativi. Vi preghiamo di non trasmettere per email alcun dato di dossier di clienti.</p></div></div></section><section id="section-02" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>02</b><span>Richiedere una dimostrazione</span></div><div class="editorial-copy"><h2>Richiedere una dimostrazione</h2><p class="rv">Indicate nel vostro messaggio: settore di pratica, cantone, lingue di lavoro e la fascia oraria che vi conviene.</p></div></div></section><section id="section-03" class="editorial-section"><div class="editorial-section-grid"><div class="editorial-section-meta"><b>03</b><span>Stampa &amp;amp; partenariati</span></div><div class="editorial-copy"><h2>Stampa &amp; partenariati</h2><p class="rv">Stesso indirizzo, precisando l’oggetto. Dossier di presentazione su richiesta.</p></div></div></section></div></div>
+</main><footer><div class="wrap">
   <div class="cols">
     <div><div class="f-mark">LexTutor</div><p style="margin-top:13px;font-size:13.5px;max-width:34ch">Il diritto svizzero, prove alla mano. Pipeline di verifica proprietaria · Ospitato in Svizzera.</p></div>
     <div><h4>Prodotto</h4><a href="plateforme.html">Piattaforma</a><a href="solutions.html">Soluzioni</a><a href="securite.html">Sicurezza</a></div>
