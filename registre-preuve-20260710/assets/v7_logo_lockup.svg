@@ -1,0 +1,11 @@
+<svg viewBox="0 0 300 64" width="300" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Symbole -->
+  <g transform="translate(0, 14) scale(0.5625)">
+    <path d="M0 0 h20 v4 h-16 v16 h-4 z" fill="#171512"/>
+    <path d="M64 0 h-20 v4 h16 v16 h4 z" fill="#171512"/>
+    <path d="M0 64 h20 v-4 h-16 v-16 h-4 z" fill="#171512"/>
+    <rect x="48" y="48" width="16" height="16" fill="#168a45"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="48" y="41" font-family="Inter, -apple-system, sans-serif" font-weight="300" font-size="24" letter-spacing="-0.048em" fill="#171512">LexTutor<tspan fill="#78736a" font-weight="300">.ai</tspan></text>
+</svg>

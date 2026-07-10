@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LexTutor — Prévisualisation Registre de preuve</title>
+  <style>
+    :root { --paper:#fdfcf9; --ink:#171512; --muted:#78736a; --line:#dedad1; --green:#168a45; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; color:var(--ink); background:var(--paper); font-family:Inter,"Helvetica Neue",Arial,sans-serif; }
+    main { width:min(100% - 32px,920px); padding:64px 0; }
+    img { width:190px; height:auto; }
+    .label { display:block; margin:72px 0 18px; color:var(--muted); font:700 11px/1.4 Consolas,monospace; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { max-width:780px; margin:0; font-size:clamp(44px,7vw,78px); line-height:1; letter-spacing:-.055em; }
+    p { max-width:680px; color:#514c45; font-size:18px; line-height:1.6; }
+    nav { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:48px; }
+    a { min-height:150px; display:flex; flex-direction:column; justify-content:space-between; padding:24px; border:1px solid var(--line); color:var(--ink); text-decoration:none; }
+    a:hover, a:focus-visible { border-color:var(--ink); outline:none; }
+    a strong { font-size:25px; }
+    a span { color:var(--green); font:700 12px/1.4 Consolas,monospace; }
+    footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font:500 11px/1.5 Consolas,monospace; }
+    @media(max-width:640px) { nav { grid-template-columns:1fr; } .label { margin-top:48px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="assets/v7_logo_lockup.svg" alt="LexTutor.ai">
+    <span class="label">Prévisualisation isolée · non validée · 10 juillet 2026</span>
+    <h1>Le Registre de preuve appliqué au site.</h1>
+    <p>Deux maquettes à examiner avant toute intégration. Aucun fichier du site existant ou de production n’est modifié par cette prévisualisation.</p>
+    <nav aria-label="Choisir une maquette">
+      <a href="home.html"><strong>Homepage H-A</strong><span>Ouvrir la maquette →</span></a>
+      <a href="plateforme.html"><strong>Plateforme P-A</strong><span>Ouvrir la maquette →</span></a>
+    </nav>
+    <footer>LexTutor · Direction artistique · Preview uniquement</footer>
+  </main>
+</body>
+</html>

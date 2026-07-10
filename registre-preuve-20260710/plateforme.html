@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept P-A — Les cinq couches du registre — LexTutor</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body class="platform-a">
+  <div class="concept-note"><strong>Prototype isolé P-A · Les cinq couches du registre.</strong> Les textes canoniques restent intacts ; les artefacts servent uniquement à les rendre lisibles.</div>
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Navigation principale">
+      <a class="brand" href="#"><img src="assets/v7_logo_lockup.svg" alt="LexTutor.ai"></a>
+      <div class="nav-links"><a href="#" aria-current="page">Plateforme</a><a href="#">Solutions</a><a href="#">Bench</a><a href="#">Sécurité</a></div>
+      <div class="langs mono"><strong>FR</strong> · DE · IT · EN</div>
+      <a class="button primary" href="#">Demander une démo</a>
+      <button class="menu-button" type="button" aria-label="Ouvrir le menu">MENU</button>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-intro">
+      <div class="wrap">
+        <span class="eyebrow">Architecture</span>
+        <h1>Ce qui se passe entre votre question et la preuve.</h1>
+        <p class="lead">LexTutor n’est pas un modèle de langage posé sur une base documentaire. C’est un pipeline juridique en étapes successives, où la génération n’intervient qu’après la constitution, la gouvernance et la vérification des sources. Cette page décrit les cinq couches de ce pipeline — dans l’ordre où votre question les traverse.</p>
+      </div>
+    </header>
+
+    <div class="wrap section-grid" style="padding-top:70px">
+      <nav class="layer-nav" aria-label="Les cinq couches">
+        <a href="#c1"><span class="mono">01</span><span>Compréhension</span></a>
+        <a href="#c2"><span class="mono">02</span><span>Constitution</span></a>
+        <a href="#c3"><span class="mono">03</span><span>Gouvernance</span></a>
+        <a href="#c4"><span class="mono">04</span><span>Analyse</span></a>
+        <a href="#c5"><span class="mono">05</span><span>Vérification</span></a>
+      </nav>
+      <div class="layer-content">
+        <section id="c1" class="section layer" style="padding-top:0">
+          <div class="layer-pair">
+            <div><span class="eyebrow">01 · Qualification</span><h2>Compréhension juridique</h2><p class="layer-body">La question est analysée comme un juriste le ferait : domaines en jeu, codes applicables, langue, canton. Le système distingue ce que la lettre seule confond — CO art. 368 traite des défauts de l’ouvrage, CC art. 368 de la protection de l’adulte. Une question courte et un état de fait de trois pages ne suivent pas le même chemin : la profondeur d’analyse s’ajuste à la complexité de la demande.</p></div>
+            <aside class="artifact"><div class="artifact-head">Question qualifiée</div><div class="artifact-body"><div class="artifact-line"><span>Canton</span><b>VD</b></div><div class="artifact-line"><span>Domaine</span><b>Entreprise</b></div><div class="artifact-line"><span>Langue</span><b>FR</b></div><div class="artifact-line"><span>Code pertinent</span><b class="ok">CO</b></div><div class="artifact-line"><span>Code distingué</span><b>CC</b></div></div></aside>
+          </div>
+        </section>
+
+        <section id="c2" class="section layer">
+          <div class="layer-pair">
+            <div><span class="eyebrow">02 · Recherche</span><h2>Constitution des sources</h2><p class="layer-body">Plusieurs voies de recherche convergent — sémantique, lexicale, terminologique et par le graphe de citations — sur les corpus fédéraux et cantonaux. La voie terminologique s’appuie sur le thésaurus juridique trilingue du Tribunal fédéral : une notion formulée en français retrouve ses équivalents allemands et italiens. La voie du graphe remonte les liens entre dispositions et décisions, et ramène des sources qu’une recherche par mots-clés ne voit jamais.</p></div>
+            <aside class="artifact"><div class="artifact-head">Entrées du dossier</div><div class="artifact-body"><div class="artifact-line"><span>Disposition</span><b class="ok">CO art. 367</b></div><div class="artifact-line"><span>Disposition</span><b class="ok">CO art. 368</b></div><div class="artifact-line"><span>Disposition</span><b class="ok">CO art. 371 al. 2</b></div><div class="artifact-line"><span>Jurisprudence</span><b class="case-color">ATF 136 III 273</b></div></div></aside>
+          </div>
+        </section>
+
+        <section id="c3" class="section layer">
+          <div class="layer-pair">
+            <div><span class="eyebrow">03 · Sélection</span><h2>Gouvernance</h2><p class="layer-body">Les dispositions critiques du domaine sont garanties présentes dans le dossier ; le bruit est écarté ; la hiérarchie des normes est respectée. Le dossier reste volontairement borné : un nombre maîtrisé de sources lues vaut mieux qu’une accumulation que personne ne contrôle. C’est cette couche — et non le modèle — qui décide de ce qui entre dans votre dossier.</p></div>
+            <aside class="artifact"><div class="artifact-head">Décision d’inclusion</div><div class="artifact-body"><div class="artifact-line"><span>CO art. 368</span><b class="ok">Retenue</b></div><div class="artifact-line"><span>CC art. 368</span><b>Écartée</b></div><div class="artifact-line"><span>Motif</span><b>Domaine</b></div><div class="artifact-line"><span>Hiérarchie</span><b>Respectée</b></div></div></aside>
+          </div>
+        </section>
+
+        <section class="section tint graph-section" aria-labelledby="graph-title">
+          <span class="eyebrow">Cartographie spécialisée</span><h2 id="graph-title">Le graphe d’autorité.</h2>
+          <p class="lead">Le graphe ne décore pas : il décide quelles sources entrent dans votre dossier, et révèle celles qu’une recherche classique manque.</p>
+          <div class="artifact" style="margin-top:34px">
+            <div class="graph" role="img" aria-label="Relations illustratives entre CO art. 367, CO art. 368, ATF 136 III 273 et l’analyse">
+              <span class="node n1">CO art. 367</span><span class="node n2">CO art. 368</span><span class="node case n3">ATF 136 III 273</span><span class="node analysis n4">Analyse</span>
+              <span class="edge e1"></span><span class="edge e2"></span><span class="edge e3"></span>
+            </div>
+            <div class="legend"><span><i class="dot"></i>Loi fédérale</span><span><i class="dot case"></i>Jurisprudence</span><span><i class="dot analysis"></i>Analyse</span><span>Relations illustratives · références réelles de la maquette</span></div>
+          </div>
+        </section>
+
+        <section id="c4" class="section layer">
+          <div class="layer-pair">
+            <div><span class="eyebrow">04 · Rédaction contrainte</span><h2>Analyse</h2><p class="layer-body">Le modèle rédige sous contrainte : chaque proposition doit s’appuyer sur une source du dossier — jamais l’inverse. Il n’est pas autorisé à compléter avec sa mémoire d’entraînement ce que les sources ne disent pas. Si le dossier ne permet pas de trancher un point, l’analyse le dit explicitement.</p></div>
+            <aside class="artifact"><div class="artifact-head">Proposition citée</div><div class="artifact-body"><div class="artifact-line"><span>Proposition</span><b class="analysis-color">Analyse</b></div><div class="artifact-line"><span>Source liée</span><b class="ok">CO art. 368</b></div><div class="artifact-line"><span>Sans source</span><b>Non affirmé</b></div></div></aside>
+          </div>
+        </section>
+
+        <section id="c5" class="section layer">
+          <div class="layer-pair">
+            <div><span class="eyebrow">05 · Contrôle</span><h2>Vérification</h2><p class="layer-body">Avant affichage, chaque citation est validée contre le graphe : la disposition existe, l’arrêt existe, la référence est exacte. Ce qui n’est pas vérifiable est signalé comme tel — il n’est ni masqué, ni reformulé. Chaque source du registre porte son lien vers Fedlex ou vers le site du Tribunal fédéral : le contrôle vous appartient.</p></div>
+            <aside class="artifact proof-corners"><div class="artifact-head">État final</div><div class="artifact-body"><div class="artifact-line"><span>Disposition</span><b class="ok">Existe</b></div><div class="artifact-line"><span>Référence</span><b class="ok">Exacte</b></div><div class="artifact-line"><span>Lien officiel</span><b class="ok">Fedlex ↗</b></div><div class="artifact-line"><span>Statut</span><b class="ok">Vérifié</b></div></div><span class="verified-corner"></span></aside>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="section tint"><div class="wrap"><span class="eyebrow">Source Ledger</span><h2>Le registre des sources, en détail.</h2><p class="lead">Article ou arrêt, rang normatif, état de vigueur à la date de l’analyse, lien vers la source officielle, signaux de prudence — arrêt distingué, révision en cours. Exportable, citable, opposable.</p></div></section>
+    <section class="section"><div class="wrap section-grid"><div class="section-index">LANGUES</div><div><h2>Trois langues, un seul droit.</h2><p class="lead">Un canon unique par loi — CO, et non un corpus parallèle par langue (OR en allemand, CO en français et en italien). Vos questions en français, en allemand ou en italien convergent vers les mêmes sources canoniques.</p></div><aside class="proof-margin mono">FR · DE · IT<br>Un canon unique par loi</aside></div></section>
+    <section class="section tint"><div class="wrap section-grid"><div class="section-index">MODES</div><div><h2>Des modes isolés par construction.</h2><p class="lead">Recherche, Pro et JurisExpress sont des chemins séparés : ce qui sert le triage rapide ne dégrade jamais l’analyse opposable, et réciproquement.</p></div><aside class="proof-margin mono">Recherche<br>Pro<br>JurisExpress</aside></div></section>
+    <section class="section"><div class="wrap"><span class="eyebrow">Questions techniques</span><h2>Questions techniques.</h2><div class="faq-list">
+      <details><summary>Quelles sources sont couvertes ?</summary><p>Le droit fédéral en vigueur — codes, lois, ordonnances — et la jurisprudence du Tribunal fédéral, complétés par des corpus cantonaux en extension. Couverture détaillée : données partagées sur rendez-vous. La doctrine n’est pas intégrée à ce jour.</p></details>
+      <details><summary>Comment le corpus est-il mis à jour ?</summary><p>Fedlex et les recueils officiels cantonaux sont les seules références de l’état du droit. Chaque source du registre affiche son état de vigueur à la date de l’analyse ; une disposition abrogée ou révisée est signalée comme telle. Cadence de synchronisation : donnée partagée sur rendez-vous.</p></details>
+      <details><summary>Quelles langues sont prises en charge ?</summary><p>Le français, l’allemand et l’italien, sur un canon unique par loi : StPO et CPP désignent la même norme, pas deux corpus. La terminologie juridique s’appuie sur le thésaurus trilingue du Tribunal fédéral.</p></details>
+      <details><summary>Quelles sont les limites assumées ?</summary><p>LexTutor ne couvre ni la doctrine, ni l’ensemble des vingt-six cantons à ce jour. Il ne remplace pas le jugement de l’avocat : il prépare le dossier de preuve, il ne plaide pas. Surtout, il signale ce qu’il ne sait pas — un point que les sources ne permettent pas de trancher est dit non tranché, pas comblé.</p></details>
+      <details><summary>Quelle différence avec un chatbot généraliste ?</summary><p>Un chatbot généraliste génère d’abord et cite parfois. Chez LexTutor, la génération n’intervient qu’après la constitution, la gouvernance et la vérification des sources : le modèle rédige à partir d’un dossier gouverné, sous contrainte de citation, et chaque référence est validée avant affichage. Pas une réponse. Un dossier de preuve.</p></details>
+    </div></div></section>
+    <section class="section tint"><div class="wrap section-grid"><div class="section-index">DÉMONSTRATION</div><div><h2>Voyez le registre des sources sur votre propre question.</h2><a class="button primary" href="#">Demander une démo</a></div><aside class="proof-margin">Le contrôle vous appartient.</aside></div></section>
+  </main>
+
+  <footer class="footer"><div class="wrap"><div class="footer-grid"><div><strong>LexTutor</strong><p>Pas une réponse. Un dossier de preuve.</p></div><div><strong>Produit</strong><a href="#">Plateforme</a><a href="#">Solutions</a></div><div><strong>Ressources</strong><a href="#">Bench</a><a href="#">Sécurité</a></div></div><div class="footer-bottom">© 2026 LexTutor — Suisse · FR · DE · IT · EN</div></div></footer>
+</body>
+</html>
