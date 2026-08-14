@@ -326,7 +326,15 @@ main{display:block}
 .editorial-ref .platform-index a{align-items:start;padding:11px 0;line-height:1.35}
 .editorial-ref .platform-index a span:last-child{overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}
 .editorial-main{border-top:1px solid var(--line)}
-.editorial-section{scroll-margin-top:86px;padding:68px 0;border-bottom:1px solid var(--line)}
+.editorial-section{scroll-margin-top:86px;padding:68px 0;border-bottom:1px solid var(--line);position:relative}
+/* Le filet de section porte la marque : deux montants aux extrémités reprennent
+   la géométrie du cadre de preuve du logo. Registre du trait de coupe, propre au
+   document imprimé — pas un ornement. Encre, jamais une couleur sémantique :
+   vert, violet et orange désignent des types de source et rien d'autre. */
+.editorial-section::before,.editorial-section::after{content:"";position:absolute;bottom:0;width:1px;height:9px;background:var(--line-2)}
+.editorial-section::before{left:0}
+.editorial-section::after{right:0}
+.editorial-section:last-child::before,.editorial-section:last-child::after{display:none}
 .editorial-section:first-child{border-top:0}
 .editorial-section:last-child{border-bottom:0}
 .editorial-section-grid{display:grid;grid-template-columns:116px minmax(0,1fr);gap:34px;align-items:start}
@@ -443,6 +451,6 @@ main{display:block}
     <div><h4>Ressourcen</h4><a href="bench.html">Validierung</a><a href="methodologie.html">Methodik</a><a href="tarifs.html">Einführung</a><a href="a-propos.html">Über uns</a></div>
     <div><h4>Rechtliches</h4><a href="mentions-legales.html">Impressum</a><a href="protection-donnees.html">Datenschutz</a><a href="contact.html">Kontakt</a></div>
   </div>
-  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a class="on" href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Herausgeber und rechtliche Hinweise: siehe Impressum</span><span style="opacity:.45">build 14.08 12:50 UTC</span></div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a class="on" href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Herausgeber und rechtliche Hinweise: siehe Impressum</span><span style="opacity:.45">build 14.08 12:52 UTC</span></div>
 </div></footer>
 <script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>
