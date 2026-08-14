@@ -308,6 +308,11 @@ main{display:block}
 .platform-faq summary::after{content:"+";font-family:var(--mono);font-size:16px}
 .platform-faq details[open] summary::after{content:"−"}
 .platform-faq p{padding:0 0 24px;color:var(--ink-2)}
+.faq-more{margin:0;padding:0 0 24px}
+.platform-faq .faq-more{padding-top:0}
+.faq-more a{display:inline-flex;align-items:center;min-height:24px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;border-bottom:1px solid var(--line-2);transition:color .15s,border-color .15s}
+.faq-more a::before{content:"→";margin-right:8px}
+.faq-more a:hover,.faq-more a:focus-visible{color:var(--ink);border-color:var(--ink)}
 .platform-cta{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
 
 /* Extension du langage P-A aux pages éditoriales de la V6. */
@@ -483,6 +488,6 @@ upd()})();</script>
     <div><h4>Ressources</h4><a href="bench.html">Validation</a><a href="methodologie.html">Méthodologie</a><a href="tarifs.html">Déploiement</a><a href="a-propos.html">À propos</a></div>
     <div><h4>Légal</h4><a href="mentions-legales.html">Mentions légales</a><a href="protection-donnees.html">Protection des données</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a class="on" href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Éditeur et informations légales : voir mentions légales</span><span style="opacity:.45">build 14.08 12:31 UTC</span></div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a class="on" href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Éditeur et informations légales : voir mentions légales</span><span style="opacity:.45">build 14.08 12:42 UTC</span></div>
 </div></footer>
 <script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>
