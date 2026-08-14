@@ -308,6 +308,14 @@ main{display:block}
 .platform-faq summary::after{content:"+";font-family:var(--mono);font-size:16px}
 .platform-faq details[open] summary::after{content:"−"}
 .platform-faq p{padding:0 0 24px;color:var(--ink-2)}
+.corpus-band{background:var(--night);color:var(--paper);padding:64px 0}
+.corpus-band .cb-date{margin:0 0 32px;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#8d857a}
+.corpus-band .cb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 64px;align-items:start}
+.corpus-band .cb-item{display:grid;gap:10px}
+.corpus-band .cb-item b{font-size:clamp(38px,5vw,60px);line-height:1;font-weight:640;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--paper)}
+.corpus-band .cb-item span{font-size:15px;line-height:1.45;color:#b8b0a4;max-width:34ch}
+.corpus-band .cb-note{margin:36px 0 0;font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:#78716a}
+@media(max-width:720px){.corpus-band{padding:48px 0}.corpus-band .cb-grid{grid-template-columns:1fr;gap:32px}}
 .pending-answer{color:var(--ink-3);font-style:italic}
 .faq-more{margin:0;padding:0 0 24px}
 .platform-faq .faq-more{padding-top:0}
@@ -487,6 +495,14 @@ function upd(){b.textContent=v.paused?b.dataset.play:b.dataset.pause}
 b.addEventListener('click',function(){if(v.paused){v.play()}else{v.pause()}});
 v.addEventListener('play',upd);v.addEventListener('pause',upd);
 upd()})();</script>
+<aside class="corpus-band"><div class="wrap">
+  <p class="cb-date">Corpus measured on 14 August 2026</p>
+  <div class="cb-grid">
+    <div class="cb-item"><b>40 410</b><span>articles of federal and cantonal law, indexed</span></div>
+    <div class="cb-item"><b>461 661</b><span>indexed court decisions</span></div>
+  </div>
+  <p class="cb-note">never an estimate, never an unvalidated figure</p>
+</div></aside>
 <main><section><div class="wrap" style="text-align:center">
   <p class="closing rv" style="font-size:clamp(19px,2.2vw,24px);max-width:none">“What the opposing party will verify, you have already verified.”</p>
 </div></section></main>
@@ -497,6 +513,6 @@ upd()})();</script>
     <div><h4>Resources</h4><a href="bench.html">Validation</a><a href="methodologie.html">Methodology</a><a href="tarifs.html">Deployment</a><a href="a-propos.html">About</a></div>
     <div><h4>Legal</h4><a href="mentions-legales.html">Legal notice</a><a href="protection-donnees.html">Data protection</a><a href="contact.html">Contact</a></div>
   </div>
-  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a class="on" href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Publisher and legal information: see legal notice</span><span style="opacity:.45">build 14.08 12:52 UTC</span></div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a class="on" href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Publisher and legal information: see legal notice</span><span style="opacity:.45">build 14.08 12:58 UTC</span></div>
 </div></footer>
 <script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>
