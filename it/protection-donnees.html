@@ -197,6 +197,17 @@ footer a:hover{color:#fff}
 /* Bronze — la voix de LexTutor : structure, repères, orientation ; jamais une source.
    Déclaré ici plutôt que dans la maquette source, avec sa raison. BRAND.md §3 R7. */
 :root{--mark:#8a6a3c;--mark-2:#a8875a}
+/* Point de contact en mobile. La barre masquait le bouton avec les liens et le
+   sélecteur de langue pour faire place au menu : conséquence non voulue, plus
+   aucun point d'action sur des pages qui font jusqu'à 11 écrans. Le bouton
+   revient, en libellé court repris de la navigation — aucune traduction créée. */
+.cta-short{display:none}
+@media(max-width:960px){
+  nav .btn.nav-cta{display:inline-flex;margin-left:auto;margin-right:10px;padding:8px 14px;font-size:13px}
+  nav .btn.nav-cta .cta-long{display:none}
+  nav .btn.nav-cta .cta-short{display:inline}
+}
+@media(max-width:360px){nav .btn.nav-cta{padding:7px 11px;font-size:12px}}
 .lang a{color:inherit;padding:2px 3px;border-radius:3px}
 .lang a.on{color:var(--ink);font-weight:700;box-shadow:inset 0 -2px 0 var(--ink)}
 .mnav .mlang{display:flex;gap:6px;padding:10px 14px 6px;border-top:1px solid var(--line);margin-top:8px;font-family:var(--mono);font-size:12px}
@@ -449,7 +460,7 @@ main{display:block}
 </svg>LexTutor</a>
   <div class="links"><a href="plateforme.html">Piattaforma</a><a href="solutions.html">Soluzioni</a><a href="bench.html">Validazione</a><a href="securite.html">Sicurezza</a><a href="tarifs.html">Implementazione</a></div>
   <span class="lang"><a href="../fr/protection-donnees.html" hreflang="fr">FR</a> · <a href="../de/protection-donnees.html" hreflang="de">DE</a> · <a class="on" href="../it/protection-donnees.html" hreflang="it">IT</a> · <a href="../en/protection-donnees.html" hreflang="en">EN</a></span>
-  <a class="btn btn-p" href="contact.html" style="margin-left:16px">Richiedere una demo</a>
+  <a class="btn btn-p nav-cta" href="contact.html" style="margin-left:16px"><span class="cta-long">Richiedere una demo</span><span class="cta-short">Contatto</span></a>
   <details class="mnav"><summary aria-label="Menu">☰</summary><div class="panel"><a href="plateforme.html">Piattaforma</a><a href="solutions.html">Soluzioni</a><a href="bench.html">Validazione</a><a href="securite.html">Sicurezza</a><a href="tarifs.html">Implementazione</a><a href="methodologie.html">Metodologia</a><a href="a-propos.html">Chi siamo</a><a href="contact.html">Contatto</a><div class="mlang"><a href="../fr/protection-donnees.html" hreflang="fr">FR</a> · <a href="../de/protection-donnees.html" hreflang="de">DE</a> · <a class="on" href="../it/protection-donnees.html" hreflang="it">IT</a> · <a href="../en/protection-donnees.html" hreflang="en">EN</a></div></div></details>
 </div></nav>
 <main class="platform-ref editorial-ref artifact-protection-donnees">
@@ -462,6 +473,6 @@ main{display:block}
     <div><h4>Risorse</h4><a href="bench.html">Validazione</a><a href="methodologie.html">Metodologia</a><a href="tarifs.html">Implementazione</a><a href="a-propos.html">Chi siamo</a></div>
     <div><h4>Note legali</h4><a href="mentions-legales.html">Note legali</a><a href="protection-donnees.html">Protezione dei dati</a><a href="contact.html">Contatto</a></div>
   </div>
-  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a class="on" href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Editore e informazioni legali: vedi note legali</span><span style="opacity:.45">build 14.08 14:13 UTC</span></div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a class="on" href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Editore e informazioni legali: vedi note legali</span><span style="opacity:.45">build 15.08 04:30 UTC</span></div>
 </div></footer>
 <script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>
