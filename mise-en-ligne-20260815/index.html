@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Mise en ligne — dossier de décision | LexTutor</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%22-4 -4 72 72%22%3E%3Cpath d=%22M0 0 h20 v4 h-16 v16 h-4 z%22 fill=%22%23171512%22/%3E%3Cpath d=%22M64 0 h-20 v4 h16 v16 h4 z%22 fill=%22%23171512%22/%3E%3Cpath d=%22M0 64 h20 v-4 h-16 v-16 h-4 z%22 fill=%22%23171512%22/%3E%3Crect x=%2248%22 y=%2248%22 width=%2216%22 height=%2216%22 fill=%22%23168A45%22/%3E%3C/svg%3E">
+<style>
+:root{
+  --paper:#fdfcf9; --paper-2:#f7f5ef; --paper-3:#f1eee6;
+  --ink:#171512; --ink-2:#4a463f; --ink-3:#78736a;
+  --line:#e6e2d8; --line-2:#cfc9bb;
+  --law:#16a249; --case:#7c3bed; --ana:#f97415; --red:#e4002b;
+  --mark:#8a6a3c; --mark-2:#a8875a;
+  --sans:Inter,-apple-system,'Segoe UI',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);
+     font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.rule{height:6px;display:flex;position:sticky;top:0;z-index:10}
+.rule i{flex:1}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px 120px}
+
+header{padding:72px 0 52px;border-bottom:1px solid var(--line);margin-bottom:56px}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;
+         text-transform:uppercase;color:var(--mark);margin-bottom:20px}
+h1{font-size:40px;line-height:1.12;letter-spacing:-.025em;font-weight:600;margin-bottom:22px}
+.lede{font-size:19.5px;line-height:1.55;color:var(--ink-2);max-width:34em}
+.stamp{margin-top:30px;font-family:var(--mono);font-size:12.5px;color:var(--ink-3);
+       display:flex;flex-wrap:wrap;gap:6px 22px}
+
+section{margin-bottom:60px;scroll-margin-top:40px}
+h2{font-size:14px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;
+   color:var(--mark);font-weight:500;margin-bottom:16px;
+   padding-bottom:11px;border-bottom:1px solid var(--line)}
+h3{font-size:23px;letter-spacing:-.015em;font-weight:600;margin:0 0 16px}
+p{margin-bottom:17px;max-width:36em}
+p:last-child{margin-bottom:0}
+strong{font-weight:600}
+em{font-style:normal;background:#f6e7b8;padding:0 .18em;border-radius:2px}
+
+table{width:100%;border-collapse:collapse;margin:6px 0 20px;font-size:15.5px}
+th{text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;
+   text-transform:uppercase;color:var(--ink-3);font-weight:500;
+   padding:0 14px 9px 0;border-bottom:1px solid var(--line-2)}
+td{padding:12px 14px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{color:var(--ink-2);width:34%}
+code{font-family:var(--mono);font-size:.87em;background:var(--paper-3);
+     padding:1.5px 5px;border-radius:3px;white-space:nowrap}
+
+ul{list-style:none;margin:0 0 20px}
+li{padding:13px 0 13px 26px;border-bottom:1px solid var(--line);position:relative;max-width:38em}
+li::before{content:"";position:absolute;left:0;top:23px;width:9px;height:2px;background:var(--line-2)}
+li:last-child{border-bottom:none}
+li b{font-weight:600;display:block;margin-bottom:3px}
+li span{color:var(--ink-2);font-size:15.5px}
+
+.dec{border:1px solid var(--line-2);border-radius:5px;padding:24px 26px;margin-bottom:18px;
+     background:var(--paper-2)}
+.dec .n{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--mark);
+        text-transform:uppercase;margin-bottom:9px}
+.dec h3{font-size:20px;margin-bottom:11px}
+.dec p{font-size:16px;margin-bottom:0;color:var(--ink-2)}
+.dec p + p{margin-top:12px}
+
+.ok{border-left:2px solid var(--law);padding-left:18px;margin-bottom:20px}
+.warn{border-left:2px solid var(--ana);padding-left:18px;margin-bottom:20px}
+.ok .t,.warn .t{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;
+                text-transform:uppercase;margin-bottom:7px}
+.ok .t{color:#15803d}.warn .t{color:#c2410c}
+
+figure{margin:22px 0 26px}
+figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:4px}
+figcaption{font-size:14px;color:var(--ink-3);margin-top:10px;font-family:var(--mono);
+           letter-spacing:.02em}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.cards{grid-template-columns:1fr}
+  h1{font-size:30px}.wrap{padding:0 18px 80px}header{padding:48px 0 36px}
+  td:first-child{width:42%}}
+
+footer{border-top:1px solid var(--line);padding-top:26px;margin-top:8px;
+       font-size:14.5px;color:var(--ink-3)}
+footer a{color:var(--ink-2)}
+a{color:var(--ink)}
+</style></head><body>
+
+<div class="rule"><i style="background:var(--law)"></i><i style="background:var(--case)"></i><i style="background:var(--ana)"></i></div>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Dossier de décision · équipe</p>
+  <h1>Mettre le site en ligne : ce qui est prêt, ce qui reste à trancher.</h1>
+  <p class="lede">Le site v6 est complet et délibérément invisible. Il vient de recevoir la couche
+  qui le rendrait trouvable, posée mais inactive. Rien ne bascule sans l’accord de l’équipe —
+  ce document existe pour que cet accord se donne sur des faits.</p>
+  <p class="stamp"><span>15 août 2026</span><span>44 pages · 11 routes · 4 langues</span><span>aucune mise en ligne effectuée</span></p>
+</header>
+
+<section>
+  <h2>01 — Où nous en sommes</h2>
+  <p>Le site existe en entier : onze routes servies en français, allemand, italien et anglais.
+  Il est hébergé sur GitHub Pages et n’est accessible qu’à qui détient le lien.</p>
+  <table>
+    <tr><th>Ce qui est mesuré</th><th>Valeur</th></tr>
+    <tr><td>Pages servies</td><td>44 (11 routes × 4 langues), 49 Ko en moyenne</td></tr>
+    <tr><td>Qualité de mise en page</td><td>88 vues contrôlées — 0 débordement, 0 cible tactile sous 24 px, 0 erreur console</td></tr>
+    <tr><td>Point de contact</td><td>visible sur 88 vues sur 88, mobile compris</td></tr>
+    <tr><td>Liens vers les sources officielles</td><td>12 vers Fedlex, tous ancrés sur l’article exact et dans la langue du lecteur ; 8 vers le Tribunal fédéral</td></tr>
+    <tr><td>Corpus annoncé sur le site</td><td>40 410 articles · 461 661 décisions <span style="color:var(--ink-3)">(mesuré le 14.08.2026)</span></td></tr>
+    <tr><td>Couverture cantonale publiée</td><td>VD 71 040 · GE 64 883 · BE 15 525 · NE 9 000 · JU 1 028</td></tr>
+    <tr><td>Éditeur déclaré</td><td>LexTutor Sàrl, Le Landeron (NE) — IDE CHE-384.170.891</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>02 — Invisible n’est pas introuvable</h2>
+  <p>Deux choses étaient vraies en même temps, et une seule avait été décidée.</p>
+  <p><strong>Invisible</strong>, c’était voulu : <code>noindex</code> sur les 44 pages et
+  <code>Disallow: /</code> dans <code>robots.txt</code>. Le site est en revue, pas en vitrine.</p>
+  <p><strong>Introuvable</strong>, personne ne l’avait décidé. Aucune page n’avait de description,
+  d’adresse canonique, de carte de partage ni d’entrée de plan de site. Les déclarations de langue
+  étaient en chemin relatif — <em>les moteurs les ignorent en silence</em>, ce qui a exactement la
+  même forme qu’une absence de déclaration. Un lien partagé sur LinkedIn n’aurait affiché
+  qu’un rectangle vide.</p>
+  <p>Cette seconde partie est réparée. Elle ne rend rien public : elle rend le site
+  <em>prêt</em> à l’être, le jour où l’équipe le décide.</p>
+</section>
+
+<section>
+  <h2>03 — Ce qui change le jour où l’on ouvre</h2>
+  <p>Quatre choses, et rien d’autre. Aucune ne touche au contenu ni au design.</p>
+  <table>
+    <tr><th></th><th>Aujourd’hui</th><th>Après</th></tr>
+    <tr><td><code>robots.txt</code></td><td>Disallow: /</td><td>Allow: / + plan de site déclaré</td></tr>
+    <tr><td>Balise des 44 pages</td><td>noindex</td><td>index, follow</td></tr>
+    <tr><td>Plan de site</td><td>écrit, non déclaré</td><td>soumis aux moteurs</td></tr>
+    <tr><td>Cartes de partage</td><td>présentes, non récupérables</td><td>affichées sur LinkedIn, X, WhatsApp</td></tr>
+  </table>
+  <div class="warn">
+    <p class="t">Asymétrie à connaître avant de décider</p>
+    <p>Ouvrir prend une commande. Refermer n’est pas symétrique : une page indexée le reste
+    jusqu’à désindexation, qui demande des semaines. C’est la seule raison pour laquelle ce
+    geste mérite une décision d’équipe plutôt qu’une exécution technique.</p>
+  </div>
+</section>
+
+<section>
+  <h2>04 — Ce qui ne change pas</h2>
+  <ul>
+    <li><b>Le contenu</b><span>Pas un mot de différence. Les textes servis sont ceux d’aujourd’hui.</span></li>
+    <li><b>Le design</b><span>Aucune modification visuelle sur les 44 pages.</span></li>
+    <li><b>Les adresses</b><span>Les chemins restent identiques ; aucun lien existant ne casse.</span></li>
+    <li><b>Les mentions légales</b><span>Éditeur, responsabilité, propriété intellectuelle : inchangés.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>05 — Ce que l’équipe doit trancher</h2>
+
+  <div class="dec">
+    <p class="n">Décision A</p>
+    <h3>Ouvre-t-on, et quand ?</h3>
+    <p>Le site est prêt techniquement. Ce n’est pas une question technique : c’est le moment
+    où LexTutor devient visible du marché et des concurrents.</p>
+  </div>
+
+  <div class="dec">
+    <p class="n">Décision B</p>
+    <h3>Où sert-on <code>lextutor.ai</code> ?</h3>
+    <p>Le domaine ne sert rien aujourd’hui. Deux voies : le brancher sur GitHub Pages,
+    où le site vit déjà — un fichier et un enregistrement DNS suffisent ; ou le servir
+    depuis l’hébergement Infomaniak existant, ce qui demande un accès dont je ne dispose pas.</p>
+    <p>Tant que cette question n’est pas tranchée, l’adresse canonique de chaque page
+    désigne l’hébergement actuel. Elle doit désigner l’endroit où la page est réellement
+    servie : la faire pointer ailleurs par anticipation reviendrait à mentir aux moteurs.</p>
+  </div>
+</section>
+
+<section>
+  <h2>06 — Réserves ouvertes</h2>
+  <p>Ce qui mérite une décision avant ou peu après l’ouverture. Aucune n’empêche techniquement
+  d’ouvrir.</p>
+  <ul>
+    <li><b>La mention « version de démonstration »</b><span>Les mentions légales annoncent, dans les quatre langues, que le site présente une version de démonstration. C’était juste en revue interne. Le reste-t-il face au marché ? Question d’équipe, pas de design.</span></li>
+    <li><b>La signature de Manuel</b><span>« Parce que vous avez besoin de vitesse, mais surtout de justesse. » Elle mérite une relecture par des locuteurs natifs dans les quatre langues avant d’être exposée.</span></li>
+    <li><b>La démonstration sans compte</b><span>Aucun concurrent examiné n’en propose : c’est le territoire vacant. Cela engage le produit, pas seulement le site.</span></li>
+    <li><b>La doctrine sous licence</b><span>Schulthess, Helbing, Dike. C’est la seule barrière durable du marché, et une décision commerciale.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>07 — Ce qui n’est pas une réserve</h2>
+  <p>Vérifié aujourd’hui, mesure à l’appui, pour qu’aucun de ces points ne serve d’objection
+  en réunion.</p>
+  <div class="ok">
+    <p class="t">Contrôlé le 15.08.2026</p>
+    <ul style="margin-bottom:0">
+      <li><b>Aucune certification n’est revendiquée</b><span>Le mot apparaît 12 fois sur le site — trois fois par langue, symétriquement — et <em>les 12 sont des dénégations</em> : ni certification indépendante, ni classement public, ni garantie de résultat. ISO 27001 et SOC 2 n’apparaissent nulle part.</span></li>
+      <li><b>Aucun champ en attente n’est servi</b><span>Les 29 marqueurs internes restants sont tous dans des légendes de travail, aucun dans un texte affiché. Zéro élément vide sur les 44 pages.</span></li>
+      <li><b>Les mentions légales sont équivalentes en quatre langues</b><span>Six sections identiques, éditeur et disclaimer compris.</span></li>
+      <li><b>La typographie a été reprise</b><span>22 apostrophes droites subsistaient dans le texte servi, mêlées aux typographiques. Elles venaient toutes du générateur ; le canon éditorial, lui, était irréprochable.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>08 — Les cartes de partage</h2>
+  <p>Ce que verra quiconque partagera un lien LexTutor, une carte par langue. Elles reprennent
+  le geste de l’accueil : le surlignage au marqueur sur la moitié qui affirme, et le filet
+  tricolore qui nomme les trois types de source — loi, jurisprudence, analyse — dans la langue
+  du lecteur.</p>
+  <div class="cards">
+    <figure><img src="../media/og-fr.png" alt="Carte de partage française"><figcaption>fr_CH</figcaption></figure>
+    <figure><img src="../media/og-de.png" alt="Carte de partage allemande"><figcaption>de_CH</figcaption></figure>
+    <figure><img src="../media/og-it.png" alt="Carte de partage italienne"><figcaption>it_CH</figcaption></figure>
+    <figure><img src="../media/og-en.png" alt="Carte de partage anglaise"><figcaption>en_GB</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>09 — Le cran d’arrêt</h2>
+  <p>La bascule tient à une variable. Pour qu’elle ne soit jamais actionnée par inertie —
+  ni par un agent au motif que « tout est prêt » — le générateur <em>refuse de construire</em>
+  une version indexable tant que l’approbation n’est pas nommée.</p>
+  <table>
+    <tr><th>Cas</th><th>Résultat vérifié</th></tr>
+    <tr><td>Construction normale</td><td>noindex sur 44 pages sur 44</td></tr>
+    <tr><td>Variable d’ouverture seule</td><td>refus, code de sortie 1</td></tr>
+    <tr><td>Variable + approbation nommée</td><td>index, follow</td></tr>
+  </table>
+  <p>Le motif est écrit dans le code, à côté de la variable, avec sa date et son auteur.
+  Quiconque tenterait la bascule le lit avant de pouvoir agir.</p>
+</section>
+
+<footer>
+  <p>Dossier établi le 15 août 2026 · <a href="../fr/index.html">voir le site</a> ·
+  aucune page n’est indexable au moment de la rédaction.</p>
+</footer>
+
+</div></body></html>
