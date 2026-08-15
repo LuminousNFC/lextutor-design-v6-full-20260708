@@ -201,6 +201,13 @@ footer a:hover{color:#fff}
    sélecteur de langue pour faire place au menu : conséquence non voulue, plus
    aucun point d'action sur des pages qui font jusqu'à 11 écrans. Le bouton
    revient, en libellé court repris de la navigation — aucune traduction créée. */
+.flow-item{width:100%}
+.flow-item>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;cursor:pointer;list-style:none}
+.flow-item>summary::-webkit-details-marker{display:none}
+.flow-item>summary::after{content:"+";font-family:var(--mono);font-size:15px;color:var(--mark);flex:none}
+.flow-item[open]>summary::after{content:"−"}
+.flow-item>summary:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.flow-item .flow-detail{display:block;padding:2px 0 14px}
 .cta-short{display:none}
 @media(max-width:960px){
   nav .btn.nav-cta{display:inline-flex;margin-left:auto;margin-right:10px;padding:8px 14px;font-size:13px}
@@ -501,6 +508,6 @@ main{display:block}
     <div><h4>Ressourcen</h4><a href="bench.html">Validierung</a><a href="methodologie.html">Methodik</a><a href="tarifs.html">Einführung</a><a href="a-propos.html">Über uns</a></div>
     <div><h4>Rechtliches</h4><a href="mentions-legales.html">Impressum</a><a href="protection-donnees.html">Datenschutz</a><a href="contact.html">Kontakt</a></div>
   </div>
-  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a class="on" href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Herausgeber und rechtliche Hinweise: siehe Impressum</span><span style="opacity:.45">build 15.08 04:30 UTC</span></div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a class="on" href="../de/index.html" hreflang="de">DE</a> · <a href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Herausgeber und rechtliche Hinweise: siehe Impressum</span><span style="opacity:.45">build 15.08 04:46 UTC</span></div>
 </div></footer>
 <script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>
