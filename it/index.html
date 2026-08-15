@@ -201,6 +201,23 @@ footer a:hover{color:#fff}
    sélecteur de langue pour faire place au menu : conséquence non voulue, plus
    aucun point d'action sur des pages qui font jusqu'à 11 écrans. Le bouton
    revient, en libellé court repris de la navigation — aucune traduction créée. */
+.cb-more{margin:18px 0 0}
+.cb-more a{display:inline-flex;align-items:center;min-height:24px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#c9ab7c;text-decoration:none;border-bottom:1px solid #5b544a;transition:color .15s,border-color .15s}
+.cb-more a::before{content:"92";margin-right:8px}
+.cb-more a:hover,.cb-more a:focus-visible{color:var(--paper);border-color:var(--paper)}
+.cov-wrap{overflow-x:auto;margin:26px 0 0;border:1px solid var(--line);border-radius:3px}
+.cov{border-collapse:collapse;width:100%;min-width:460px;font-size:15px}
+.cov th,.cov td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.cov thead th{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:500;color:var(--ink-3);background:var(--paper-2)}
+.cov tbody th{font-weight:600;color:var(--ink)}
+.cov td{color:var(--ink-2)}
+.cov .num{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13.5px;text-align:right;white-space:nowrap}
+.cov tbody tr:last-child td,.cov tbody tr:last-child th{border-bottom:1px solid var(--line-2)}
+.cov tfoot th{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--mark);font-weight:600}
+.cov tfoot td{color:var(--ink);font-weight:600}
+.cov tfoot th,.cov tfoot td{border-bottom:none}
+.cov-note{margin:16px 0 0;font-size:14px;color:var(--ink-3);max-width:62ch}
+@media(max-width:620px){.cov{min-width:0;font-size:12.5px;table-layout:fixed;width:100%}.cov th,.cov td{padding:9px 7px}.cov thead th{font-size:8.5px;letter-spacing:.05em}.cov th:first-child{width:31%}.cov th:nth-child(2){width:24%}.cov th:nth-child(3){width:26%}.cov th:nth-child(4){width:19%}.cov .num{font-size:12px;white-space:normal;word-break:keep-all}.cov tfoot th{font-size:9px}}
 .flow-item{width:100%}
 .flow-item>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;cursor:pointer;list-style:none}
 .flow-item>summary::-webkit-details-marker{display:none}
@@ -523,6 +540,7 @@ upd()})();</script>
     <div class="cb-item"><b>461 661</b><span>decisioni giudiziarie indicizzate</span></div>
   </div>
   <p class="cb-note">mai una stima, mai una cifra non validata</p>
+  <p class="cb-more"><a href="plateforme.html#couverture">Copertura, cantone per cantone</a></p>
 </div></aside>
 <main><section><div class="wrap" style="text-align:center">
   <p class="closing rv" style="font-size:clamp(19px,2.2vw,24px);max-width:none">«Ciò che la controparte verificherà, voi l'avete già verificato.»</p>
@@ -534,6 +552,6 @@ upd()})();</script>
     <div><h4>Risorse</h4><a href="bench.html">Validazione</a><a href="methodologie.html">Metodologia</a><a href="tarifs.html">Implementazione</a><a href="a-propos.html">Chi siamo</a></div>
     <div><h4>Note legali</h4><a href="mentions-legales.html">Note legali</a><a href="protection-donnees.html">Protezione dei dati</a><a href="contact.html">Contatto</a></div>
   </div>
-  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a class="on" href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Editore e informazioni legali: vedi note legali</span><span style="opacity:.45">build 15.08 04:53 UTC</span></div>
+  <div class="f-legal"><span>© 2026 LexTutor — Suisse</span><span class="lang"><a href="../fr/index.html" hreflang="fr">FR</a> · <a href="../de/index.html" hreflang="de">DE</a> · <a class="on" href="../it/index.html" hreflang="it">IT</a> · <a href="../en/index.html" hreflang="en">EN</a></span><span style="white-space:normal">Editore e informazioni legali: vedi note legali</span><span style="opacity:.45">build 15.08 05:53 UTC</span></div>
 </div></footer>
 <script>function cp(b){var t=b.parentElement.textContent.trim().split(' ').slice(0,6).join(' ');var u=location.href.split('#')[0]+'#:~:text='+encodeURIComponent(t);if(navigator.clipboard)navigator.clipboard.writeText(u);b.textContent='✓';b.classList.add('done');setTimeout(function(){b.textContent='¶';b.classList.remove('done')},1400)}</script></body></html>
